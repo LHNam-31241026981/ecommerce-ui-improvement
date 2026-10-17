@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-labelledby="title desc">
+<title id="title">Bộ hũ yến cùng túi quà</title>
+<desc id="desc">Minh họa vector nguyên bản: hũ yến thủy tinh nắp vàng và bao bì xanh rêu trên nền kem.</desc>
+<defs>
+  <linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FAF6EB"/><stop offset="1" stop-color="#EEE5D3"/></linearGradient>
+  <linearGradient id="box" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#35584C"/><stop offset="1" stop-color="#163C31"/></linearGradient>
+  <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#173B31"/><stop offset="1" stop-color="#102E26"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#B78B3D"/><stop offset="0.25" stop-color="#E4C77A"/><stop offset="0.55" stop-color="#F0D998"/><stop offset="1" stop-color="#B88C40"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#F4E8BC" stop-opacity=".96"/><stop offset=".3" stop-color="#FFF9E4"/><stop offset=".7" stop-color="#F3E7BF"/><stop offset="1" stop-color="#E7D5A2"/></linearGradient>
+  <linearGradient id="lidTop" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F0DDA7"/><stop offset="1" stop-color="#CAA451"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="11" stdDeviation="12" flood-color="#4A4634" flood-opacity=".14"/></filter>
+  <filter id="soft" x="-40%" y="-70%" width="180%" height="240%"><feGaussianBlur stdDeviation="13"/></filter>
+  <g id="sprig" fill="none" stroke="#CDB77F" stroke-width="2" stroke-linecap="round"><path d="M0 32C10 21 16 10 18 0"/><path d="M8 22C-3 22-6 16-5 11C1 11 7 14 8 22ZM13 13C23 14 28 10 29 5C22 3 17 6 13 13Z"/></g>
+  <g id="jar">
+    <ellipse cx="61" cy="205" rx="53" ry="10" fill="#4B4229" opacity=".09"/>
+    <path d="M15 47C15 37 21 32 30 32H92C101 32 107 37 107 47L113 171C114 192 103 201 88 203H34C19 201 8 192 9 171Z" fill="url(#glass)" stroke="#D4C69C" stroke-width="1.7"/>
+    <path d="M21 62L17 168C16 185 23 192 34 194" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <path d="M100 65L105 167C106 182 103 187 96 191" fill="none" stroke="#C3B37D" stroke-width="2" opacity=".5"/>
+    <path d="M28 70C41 78 35 87 47 94M75 65C62 80 81 83 67 97M90 82C82 93 95 99 85 111M32 170C43 160 39 185 52 181M71 175C80 165 82 181 92 172" fill="none" stroke="#D9C58E" stroke-width="2.3" stroke-linecap="round" opacity=".7"/>
+    <rect x="10" y="18" width="102" height="30" rx="8" fill="url(#gold)" stroke="#AE873E"/>
+    <ellipse cx="61" cy="19" rx="50" ry="9" fill="url(#lidTop)" stroke="#BA974C"/>
+    <path d="M15 38H107" stroke="#B49145" stroke-width="2" opacity=".5"/>
+    <rect x="21" y="104" width="80" height="61" rx="5" fill="#234A3D"/>
+    <rect x="25" y="108" width="72" height="53" rx="3" fill="none" stroke="#CFB77B" stroke-width=".8" opacity=".75"/>
+    <path d="M48 124Q61 113 74 124Q66 122 61 128Q56 122 48 124Z" fill="none" stroke="#DDC68C" stroke-width="1.4"/>
+    <text x="61" y="146" fill="#F4E5B5" text-anchor="middle" font-size="16" font-family="Georgia, 'Times New Roman', serif" letter-spacing="2">YẾN</text>
+    <path d="M43 153H79" stroke="#CFB77B" stroke-width=".8"/>
+  </g>
+</defs>
+<rect width="800" height="600" fill="url(#back)"/>
+<circle cx="698" cy="66" r="230" fill="#FFFFFF" opacity=".24"/>
+<circle cx="88" cy="498" r="200" fill="#E6DABF" opacity=".22"/>
+<path d="M0 481Q400 463 800 489V600H0Z" fill="#F5EFE1" opacity=".65"/>
+<ellipse cx="414" cy="502" rx="225" ry="22" fill="#786B48" opacity=".13" filter="url(#soft)"/>
+<g filter="url(#shadow)">
+  <path d="M301 196H581L601 450H282Z" fill="url(#box)"/>
+  <path d="M581 196L610 218L627 449L601 450Z" fill="url(#side)"/>
+  <path d="M355 209V161C355 102 517 102 517 161V209" fill="none" stroke="#B79A58" stroke-width="10"/>
+  <path d="M355 209V161C355 102 517 102 517 161V209" fill="none" stroke="#D6BD80" stroke-width="4"/>
+  <rect x="315" y="221" width="253" height="204" rx="2" fill="none" stroke="#CDB77F" opacity=".55"/>
+  <path d="M377 283Q438 237 500 283Q459 269 438 300Q417 269 377 283Z" fill="none" stroke="#D9C28A" stroke-width="3"/>
+  <path d="M408 326H469M421 338H456" stroke="#CDB77F" stroke-width="2"/>
+  <use href="#sprig" transform="translate(540 355) rotate(20)"/>
+</g>
+<g filter="url(#shadow)">
+  <use href="#jar" transform="translate(175 296) scale(1.05)"/>
+  <use href="#jar" transform="translate(306 311) scale(1.05)"/>
+  <use href="#jar" transform="translate(437 296) scale(1.05)"/>
+</g>
+<use href="#sprig" transform="translate(621 482) rotate(64) scale(1.8)"/>
+</svg>
