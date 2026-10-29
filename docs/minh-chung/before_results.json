@@ -1,0 +1,301 @@
+{
+  "mode": "before",
+  "browser": "156.0.8078.48",
+  "date": "2026-10-29",
+  "records": [
+    {
+      "width": 1366,
+      "base": {
+        "title": "Yến Lam | Yến chưng và quà tặng",
+        "viewport": 1366,
+        "scrollWidth": 1366,
+        "columns": "305px 305px 305px 305px",
+        "images": [
+          {
+            "src": "combo-6.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 6 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-10.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 10 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-12.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 12 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "premium-gift.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Set Quà Tặng Premium Gift với hũ yến nắp vàng và bao bì xanh"
+          }
+        ],
+        "specs": {
+          "fontSize": "11px",
+          "color": "rgb(92, 112, 88)",
+          "lineHeight": "17.05px",
+          "width": 37.40625,
+          "height": 25.046875
+        },
+        "unitPrice": {
+          "fontSize": "12px",
+          "color": "rgb(108, 117, 107)",
+          "lineHeight": "18.6px",
+          "width": 267,
+          "height": 18.59375
+        },
+        "category": {
+          "fontSize": "8px",
+          "color": "rgb(139, 133, 110)",
+          "lineHeight": "12.4px",
+          "width": 267,
+          "height": 12.390625
+        },
+        "beforeHeights": [
+          512.671875,
+          512.671875,
+          512.671875,
+          512.671875
+        ],
+        "listTag": "P",
+        "cssLoaded": true
+      },
+      "opened": {
+        "open": true,
+        "summaryText": "Xem thông tin",
+        "descriptionFont": "12px",
+        "buyLinkHeight": 19.1875,
+        "buyLinkWidth": 120.046875,
+        "afterHeights": [
+          613.421875,
+          512.671875,
+          512.671875,
+          512.671875
+        ],
+        "scrollWidth": 1366,
+        "target": "_blank",
+        "href": "https://yenlamnest.vn/product/combo-6-hu-yen-du-vi-150ml/"
+      },
+      "keyboardReached": true,
+      "tabs": 6,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "matches": true
+      },
+      "keyboardOpened": true,
+      "keyboardClosed": true,
+      "hover": {
+        "background": "rgb(13, 48, 38)",
+        "hovered": true
+      },
+      "errors": []
+    },
+    {
+      "width": 768,
+      "base": {
+        "title": "Yến Lam | Yến chưng và quà tặng",
+        "viewport": 768,
+        "scrollWidth": 768,
+        "columns": "349px 349px",
+        "images": [
+          {
+            "src": "combo-6.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 6 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-10.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 10 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-12.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 12 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "premium-gift.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Set Quà Tặng Premium Gift với hũ yến nắp vàng và bao bì xanh"
+          }
+        ],
+        "specs": {
+          "fontSize": "12px",
+          "color": "rgb(92, 112, 88)",
+          "lineHeight": "18.6px",
+          "width": 39.34375,
+          "height": 26.59375
+        },
+        "unitPrice": {
+          "fontSize": "12px",
+          "color": "rgb(108, 117, 107)",
+          "lineHeight": "18.6px",
+          "width": 301,
+          "height": 18.59375
+        },
+        "category": {
+          "fontSize": "8px",
+          "color": "rgb(139, 133, 110)",
+          "lineHeight": "12.4px",
+          "width": 301,
+          "height": 12.390625
+        },
+        "beforeHeights": [
+          569.421875,
+          569.421875,
+          569.421875,
+          569.421875
+        ],
+        "listTag": "P",
+        "cssLoaded": true
+      },
+      "opened": {
+        "open": true,
+        "summaryText": "Xem thông tin",
+        "descriptionFont": "12px",
+        "buyLinkHeight": 19.1875,
+        "buyLinkWidth": 120.046875,
+        "afterHeights": [
+          650.984375,
+          569.421875,
+          569.421875,
+          569.421875
+        ],
+        "scrollWidth": 768,
+        "target": "_blank",
+        "href": "https://yenlamnest.vn/product/combo-6-hu-yen-du-vi-150ml/"
+      },
+      "keyboardReached": true,
+      "tabs": 6,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "matches": true
+      },
+      "keyboardOpened": true,
+      "keyboardClosed": true,
+      "hover": {
+        "background": "rgb(13, 48, 38)",
+        "hovered": true
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "base": {
+        "title": "Yến Lam | Yến chưng và quà tặng",
+        "viewport": 390,
+        "scrollWidth": 390,
+        "columns": "354px",
+        "images": [
+          {
+            "src": "combo-6.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 6 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-10.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 10 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "combo-12.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Combo 12 Hũ Yến Đủ Vị với hũ yến nắp vàng và bao bì xanh"
+          },
+          {
+            "src": "premium-gift.svg",
+            "complete": true,
+            "width": 800,
+            "height": 600,
+            "alt": "Minh họa Set Quà Tặng Premium Gift với hũ yến nắp vàng và bao bì xanh"
+          }
+        ],
+        "specs": {
+          "fontSize": "12px",
+          "color": "rgb(92, 112, 88)",
+          "lineHeight": "18.6px",
+          "width": 41.34375,
+          "height": 28.59375
+        },
+        "unitPrice": {
+          "fontSize": "12px",
+          "color": "rgb(108, 117, 107)",
+          "lineHeight": "18.6px",
+          "width": 306,
+          "height": 18.59375
+        },
+        "category": {
+          "fontSize": "9px",
+          "color": "rgb(139, 133, 110)",
+          "lineHeight": "13.95px",
+          "width": 306,
+          "height": 13.9375
+        },
+        "beforeHeights": [
+          553.3125,
+          553.3125,
+          553.3125,
+          553.3125
+        ],
+        "listTag": "P",
+        "cssLoaded": true
+      },
+      "opened": {
+        "open": true,
+        "summaryText": "Xem thông tin",
+        "descriptionFont": "13px",
+        "buyLinkHeight": 20.796875,
+        "buyLinkWidth": 129.625,
+        "afterHeights": [
+          639.703125,
+          553.3125,
+          553.3125,
+          553.3125
+        ],
+        "scrollWidth": 390,
+        "target": "_blank",
+        "href": "https://yenlamnest.vn/product/combo-6-hu-yen-du-vi-150ml/"
+      },
+      "keyboardReached": true,
+      "tabs": 5,
+      "focus": {
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "matches": true
+      },
+      "keyboardOpened": true,
+      "keyboardClosed": true,
+      "hover": {
+        "background": "rgb(13, 48, 38)",
+        "hovered": true
+      },
+      "errors": []
+    }
+  ]
+}

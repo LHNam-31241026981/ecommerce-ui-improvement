@@ -140,3 +140,36 @@ Người dùng phát hiện lỗi các thẻ cùng hàng bị tăng chiều cao 
 - Các hàng bên dưới vẫn dịch chuyển theo chiều cao của hàng được mở; đây là hành vi của luồng bố cục thông thường.
 
 Người dùng cần nắm được vai trò của article, details, summary, CSS Grid và align-items để giải thích phần sửa. Việc phát hiện lỗi là của người dùng; việc chỉnh mã và đo kiểm nêu trên do ChatGPT hỗ trợ.
+
+
+## 9. Thực hành Buổi 2 ngày 29/10/2026
+
+### Phạm vi và yêu cầu thực tế
+
+Người học yêu cầu hoàn thành bài tập giảng viên giao dưới tên Lê Hoàng Nam, MSSV 31241026981, dựa trên báo cáo và website Buổi 1. Đây là diễn đạt lại yêu cầu giao việc, không phải một prompt Gemini mới. Các mục 1–8 phía trên giữ nguyên nhật ký lịch sử của bài trước; những phát biểu về trạng thái triển khai trong đó phản ánh từng thời điểm cũ.
+
+Bản trước dùng để đối chiếu là commit `8e68a7bf8146fa6d111cdc8d210d14163d4d9ae7`. ChatGPT đọc đề 23 trang, báo cáo trước 9 trang và mã HTML/CSS hiện có; chọn tiếp tục bốn thẻ sản phẩm. HTML có ngữ nghĩa, Flexbox, Grid, responsive và sửa lỗi giãn thẻ được ghi là phần kế thừa.
+
+### Bản giao việc kỹ thuật do ChatGPT tách từ yêu cầu
+
+Đây là chỉ dẫn nội bộ giữa các phần triển khai của ChatGPT, không gán thành câu lệnh do sinh viên đã gửi Gemini:
+
+> Implement focused Buoi2 improvements ONLY in .work/buoi2-yenlam/index.html and style.css.
+>
+> Preserve branding four products and prices/assets, old details-only single-card expansion.
+
+Phạm vi triển khai gồm tăng khả năng đọc chữ phụ, đổi nhãn Xem thông tin/Thu gọn theo details[open], bổ sung tên sản phẩm cho nhãn, đổi quy cách thành ul/li, và mở rộng vùng liên kết mua hàng lên tối thiểu 44 px. Giữ dữ liệu và URL, không thêm chức năng tạo đơn hoặc JavaScript.
+
+### Kết quả và điều chỉnh được kiểm tra
+
+ChatGPT sửa mã và kiểm thử tự động bằng Chrome 156.0.8078.48 tại 1366, 768 và 390 px. Quy cách/đơn giá/mô tả sau là 14 px; liên kết mua tăng từ 19,1875/20,796875 px lên 44 px. Cả ba lần chạy giữ đúng 4/2/1 cột, không ghi nhận tràn ngang, bốn hình tải đủ 800 × 600 px, mở/đóng bằng Enter thành công, có focus 3 px và hover đổi màu. Chỉ thẻ mở tăng chiều cao.
+
+Năm URL nguồn trả HTTP 200 khi kiểm tra GET. Không kiểm tra đặt hàng, thanh toán hoặc giao dịch. Dữ liệu thực tế và ảnh nằm trong `docs/minh-chung`; giải thích ở `docs/BAO_CAO_KIEM_THU.md` và `docs/CAU_HOI_KIEN_THUC.md`.
+
+Thay đổi liên kết mua hàng được tách riêng để giải thích: nguyên nhân là vùng chữ nhỏ, giải pháp là class riêng với inline-flex, padding và min-height; giữ URL để đánh giá tác động trình bày. README đồng thời sửa hướng dẫn cũ không còn đúng về thư mục images: bốn SVG hiện cùng cấp index.html.
+
+### Vai trò của người học và giới hạn
+
+Việc sửa mã, thu thập số đo và biên tập tài liệu trong phiên này do ChatGPT hỗ trợ. Không ghi thành thao tác kiểm thử thủ công hoặc viết mã hoàn toàn không có AI của sinh viên; không xác nhận thay người học việc đã thành thạo kiến thức. Phần bảy câu trả lời và bảng luyện sửa mã được chuẩn bị để người học tự thực hành, giải thích trước giảng viên.
+
+Giá và hình kế thừa bài khảo sát 17/10/2026, không coi là giá mới cập nhật. Chưa thử mọi thiết bị, trình đọc màn hình hoặc người dùng đại diện. Cập nhật repository và kiểm tra bản GitHub Pages được xác nhận riêng bằng commit và trạng thái triển khai thực tế, không suy ra từ kết quả cục bộ.
