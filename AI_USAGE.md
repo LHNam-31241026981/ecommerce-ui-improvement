@@ -173,3 +173,12 @@ Thay đổi liên kết mua hàng được tách riêng để giải thích: ngu
 Việc sửa mã, thu thập số đo và biên tập tài liệu trong phiên này do ChatGPT hỗ trợ. Không ghi thành thao tác kiểm thử thủ công hoặc viết mã hoàn toàn không có AI của sinh viên; không xác nhận thay người học việc đã thành thạo kiến thức. Phần bảy câu trả lời và bảng luyện sửa mã được chuẩn bị để người học tự thực hành, giải thích trước giảng viên.
 
 Giá và hình kế thừa bài khảo sát 17/10/2026, không coi là giá mới cập nhật. Chưa thử mọi thiết bị, trình đọc màn hình hoặc người dùng đại diện. Cập nhật repository và kiểm tra bản GitHub Pages được xác nhận riêng bằng commit và trạng thái triển khai thực tế, không suy ra từ kết quả cục bộ.
+
+
+## 10. Điều chỉnh sau kiểm tra bản GitHub Pages Buổi 2
+
+Bản đầu Buổi 2 được cập nhật tại commit `f46112cbf4745ab138055cb8ceb622384476d98a`; quy trình Pages hoàn tất thành công. Khi kiểm tra Console trên bản công bố, ChatGPT ghi nhận một lỗi tài nguyên: `https://lhnam-31241026981.github.io/favicon.ico` trả HTTP 404. HTML chưa khai báo biểu tượng tab nên trình duyệt yêu cầu đường dẫn mặc định ở gốc tên miền.
+
+Điều chỉnh riêng trong lần rà soát này: thêm `favicon.svg` với nét nhận diện đang dùng ở header và khai báo `<link rel="icon" type="image/svg+xml" href="favicon.svg">` trong `head`. Đường dẫn tương đối phù hợp với website nằm tại `/ecommerce-ui-improvement/`. Việc sửa do ChatGPT hỗ trợ thao tác và kiểm tra; không được ghi thành thử nghiệm thủ công không có AI của sinh viên.
+
+Nguồn kết quả trước sửa: [biên bản kiểm tra triển khai](docs/minh-chung/deployment_before_icon_fix.json). Bản sửa được kiểm tra lại trên trình duyệt trước khi đóng gói bài nộp.

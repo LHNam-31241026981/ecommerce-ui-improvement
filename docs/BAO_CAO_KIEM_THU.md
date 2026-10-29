@@ -74,3 +74,10 @@ Năm URL gồm trang shop và bốn sản phẩm trả HTTP 200 khi kiểm tra G
 ## 7. Giới hạn kiểm chứng
 
 Chưa thử bằng trình đọc màn hình thực tế, Safari, mọi thiết bị hoặc nhóm người dùng đại diện. Bổ sung tên sản phẩm trong HTML không đồng nghĩa đã xác nhận mọi tiêu chí tiếp cận. Kiểm tra bản GitHub Pages sau cập nhật là bước riêng với kết quả cục bộ này.
+
+
+## 8. Điều chỉnh lỗi tài nguyên sau triển khai
+
+Trong lần kiểm tra bản GitHub Pages sau commit `f46112c`, Console ghi nhận yêu cầu `/favicon.ico` ở gốc tên miền trả 404. Nguyên nhân là tài liệu HTML chưa khai báo biểu tượng tab. Bài bổ sung `favicon.svg` và đường dẫn tương đối trong thẻ `link` ở `head`, phù hợp với thư mục con GitHub Pages.
+
+Biên bản trước sửa: [deployment_before_icon_fix.json](minh-chung/deployment_before_icon_fix.json). Đây là điều chỉnh được phát hiện trong kiểm tra thực tế sau khi mã nguồn đã chạy được; không liên quan đến cơ chế mở thẻ sản phẩm.

@@ -23,6 +23,8 @@ HTML5 có ngữ nghĩa, CSS riêng, Flexbox, Grid, hover, focus, bố cục 4–
 
 CSS mới nằm ở mục `7. Buổi 2` cuối `style.css`. Liên kết CSS dùng `style.css?v=3`. Bài không sử dụng Bootstrap, Tailwind hoặc JavaScript; `details/summary` thực hiện mở/đóng bằng HTML nguyên bản.
 
+Bổ sung sau kiểm tra bản công bố: khai báo `favicon.svg` trong phần `head` để trình duyệt tải đúng biểu tượng tab; khắc phục yêu cầu mặc định `/favicon.ico` trả 404. Biểu tượng dùng lại nét nhận diện ở phần đầu trang.
+
 ## 3. Cách chạy
 
 1. Giải nén toàn bộ thư mục mã nguồn.
@@ -38,6 +40,7 @@ combo-6.svg
 combo-10.svg
 combo-12.svg
 premium-gift.svg
+favicon.svg
 README.md
 AI_USAGE.md
 THUYET_MINH.md

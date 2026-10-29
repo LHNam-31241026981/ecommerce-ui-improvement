@@ -1,0 +1,36 @@
+{
+  "status": 200,
+  "css": "style.css?v=3",
+  "openLabel": "Thu gọn\nsản phẩm Combo 6 Hũ Yến Đủ Vị",
+  "unitSize": "14px",
+  "listTag": "UL",
+  "images": [
+    {
+      "complete": true,
+      "w": 800,
+      "h": 600
+    },
+    {
+      "complete": true,
+      "w": 800,
+      "h": 600
+    },
+    {
+      "complete": true,
+      "w": 800,
+      "h": 600
+    },
+    {
+      "complete": true,
+      "w": 800,
+      "h": 600
+    }
+  ],
+  "overflow": false,
+  "errors": [
+    "error: Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "failed": [],
+  "diagnosed_resource": "https://lhnam-31241026981.github.io/favicon.ico",
+  "diagnosed_status": 404
+}
