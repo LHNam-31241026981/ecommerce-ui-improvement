@@ -2,8 +2,6 @@
 
 **Sinh viên:** Lê Hoàng Nam  
 **MSSV:** 31241026981  
-**Học phần:** Phát triển ứng dụng Web và Thương mại điện tử  
-**Ngày thực hiện:** 29/10/2026
 
 ## 1. Nội dung và phạm vi kế thừa
 
