@@ -1,0 +1,7 @@
+/* a: đúng cỡ chữ, căn giữa, đậm và gạch chân. */
+.ueh-text{color:blue;text-align:center;font-weight:bold;text-decoration:underline;font-size:30px}
+/* b: alpha 0.5 làm riêng chữ mờ 50%, không làm mờ toàn bộ hộp. */
+.faculty-text{color:rgba(255,0,0,.5);text-align:right;font-style:italic;border:3px dotted yellow;border-radius:14px;background:gray;font-size:15px;padding:18px}
+.shadow-text{display:inline-block;font-size:52px;font-weight:bold;color:#a8e824;background:#e4edc9;padding:8px 18px;margin:0;text-shadow:4px 2px 2px #b81915,10px 6px 10px #850d0d,0 0 18px #78a70b}
+.logo-background{height:240px;border:1px solid #dbe4e3;background-image:url('../assets/BIT_logo.svg');background-size:30px auto;background-repeat:repeat;background-attachment:fixed}
+.overflow-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.overflow-grid h3{font-size:16px}.overflow-box{box-sizing:content-box;width:100px;height:50px;border:1px solid #00676e;margin:16px 0;font-size:16px;line-height:1.35}.clip{overflow:hidden}.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.nowrap{white-space:nowrap;overflow:hidden}.full-text{color:#52676b}@media(max-width:600px){.overflow-grid{grid-template-columns:1fr}.shadow-text{font-size:42px}}

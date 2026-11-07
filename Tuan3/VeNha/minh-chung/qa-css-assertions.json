@@ -1,0 +1,85 @@
+{
+  "ueh": {
+    "fontSize": "30px",
+    "color": "rgb(0, 0, 255)",
+    "textAlign": "center",
+    "fontWeight": "700",
+    "textDecorationLine": "underline"
+  },
+  "faculty": {
+    "fontSize": "15px",
+    "color": "rgba(255, 0, 0, 0.5)",
+    "fontStyle": "italic",
+    "textAlign": "right",
+    "borderTopStyle": "dotted",
+    "borderTopColor": "rgb(255, 255, 0)",
+    "backgroundColor": "rgb(128, 128, 128)",
+    "borderTopLeftRadius": "14px"
+  },
+  "background": {
+    "backgroundSize": "30px auto",
+    "backgroundRepeat": "repeat",
+    "backgroundAttachment": "fixed"
+  },
+  "overflow": [
+    {
+      "width": "100px",
+      "height": "50px",
+      "boxSizing": "content-box",
+      "overflow": "hidden",
+      "textOverflow": "clip",
+      "whiteSpace": "normal"
+    },
+    {
+      "width": "100px",
+      "height": "50px",
+      "boxSizing": "content-box",
+      "overflow": "hidden",
+      "textOverflow": "ellipsis",
+      "whiteSpace": "nowrap"
+    },
+    {
+      "width": "100px",
+      "height": "50px",
+      "boxSizing": "content-box",
+      "overflow": "hidden",
+      "textOverflow": "clip",
+      "whiteSpace": "nowrap"
+    }
+  ],
+  "menu": [
+    "inline-block",
+    "inline-block",
+    "inline-block",
+    "inline-block"
+  ],
+  "galleryCount": 9,
+  "icons": [
+    {
+      "family": "\"Font Awesome 6 Free\"",
+      "weight": "900",
+      "content": "\"\"",
+      "loaded": true
+    },
+    {
+      "family": "\"Font Awesome 6 Free\"",
+      "weight": "900",
+      "content": "\"\"",
+      "loaded": true
+    },
+    {
+      "family": "\"Font Awesome 6 Free\"",
+      "weight": "900",
+      "content": "\"\"",
+      "loaded": true
+    },
+    {
+      "family": "\"Font Awesome 6 Brands\"",
+      "weight": "400",
+      "content": "\"\"",
+      "loaded": true
+    }
+  ],
+  "assertionsPassed": true,
+  "errors": []
+}

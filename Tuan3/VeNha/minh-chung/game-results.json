@@ -1,0 +1,350 @@
+{
+  "date": "2026-11-07",
+  "method": "AI-assisted browser input; validation by original games. No progress, timer, page content or screenshots modified. Selectors referenced and checked against public game source; not evidence of unaided student skill.",
+  "records": [
+    {
+      "game": "CSS Diner",
+      "level": 1,
+      "task": "Select the plates",
+      "selector": "plate",
+      "verified": true,
+      "image": "diner-01.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 2,
+      "task": "Select the bento boxes",
+      "selector": "bento",
+      "verified": true,
+      "image": "diner-02.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 3,
+      "task": "Select the fancy plate",
+      "selector": "#fancy",
+      "verified": true,
+      "image": "diner-03.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 4,
+      "task": "Select the apple on the plate",
+      "selector": "plate apple",
+      "verified": true,
+      "image": "diner-04.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 5,
+      "task": "Select the pickle on the fancy plate",
+      "selector": "#fancy pickle",
+      "verified": true,
+      "image": "diner-05.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 6,
+      "task": "Select the small apples",
+      "selector": ".small",
+      "verified": true,
+      "image": "diner-06.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 7,
+      "task": "Select the small oranges",
+      "selector": "orange.small",
+      "verified": true,
+      "image": "diner-07.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 8,
+      "task": "Select the small oranges in the bentos",
+      "selector": "bento orange.small",
+      "verified": true,
+      "image": "diner-08.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 9,
+      "task": "Select all the plates and bentos",
+      "selector": "plate,bento",
+      "verified": true,
+      "image": "diner-09.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 10,
+      "task": "Select all the things!",
+      "selector": "*",
+      "verified": true,
+      "image": "diner-10.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 11,
+      "task": "Select everything on a plate",
+      "selector": "plate *",
+      "verified": true,
+      "image": "diner-11.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 12,
+      "task": "Select every apple that's next to a plate",
+      "selector": "plate + apple",
+      "verified": true,
+      "image": "diner-12.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 13,
+      "task": "Select the pickles beside the bento",
+      "selector": "bento ~ pickle",
+      "verified": true,
+      "image": "diner-13.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 14,
+      "task": "Select the apple directly on a plate",
+      "selector": "plate > apple",
+      "verified": true,
+      "image": "diner-14.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 15,
+      "task": "Select the top orange",
+      "selector": "plate :first-child",
+      "verified": true,
+      "image": "diner-15.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 16,
+      "task": "Select the apple and the pickle on the plates",
+      "selector": "plate :only-child",
+      "verified": true,
+      "image": "diner-16.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 17,
+      "task": "Select the small apple and the pickle",
+      "selector": ".small:last-child",
+      "verified": true,
+      "image": "diner-17.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 18,
+      "task": "Select the 3rd plate",
+      "selector": ":nth-child(3)",
+      "verified": true,
+      "image": "diner-18.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 19,
+      "task": "Select the 1st bento",
+      "selector": "bento:nth-last-child(3)",
+      "verified": true,
+      "image": "diner-19.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 20,
+      "task": "Select first apple",
+      "selector": "apple:first-of-type",
+      "verified": true,
+      "image": "diner-20.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 21,
+      "task": "Select all even plates",
+      "selector": "plate:nth-of-type(even)",
+      "verified": true,
+      "image": "diner-21.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 22,
+      "task": "Select every 2nd plate, starting from the 3rd",
+      "selector": "plate:nth-of-type(2n+3)",
+      "verified": true,
+      "image": "diner-22.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 23,
+      "task": "Select the apple on the middle plate",
+      "selector": "apple:only-of-type",
+      "verified": true,
+      "image": "diner-23.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 24,
+      "task": "Select the last apple and orange",
+      "selector": ".small:last-of-type",
+      "verified": true,
+      "image": "diner-24.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 25,
+      "task": "Select the empty bentos",
+      "selector": "bento:empty",
+      "verified": true,
+      "image": "diner-25.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 26,
+      "task": "Select the big apples",
+      "selector": "apple:not(.small)",
+      "verified": true,
+      "image": "diner-26.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 27,
+      "task": "Select the items for someone",
+      "selector": "[for]",
+      "verified": true,
+      "image": "diner-27.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 28,
+      "task": "Select the plates for someone",
+      "selector": "plate[for]",
+      "verified": true,
+      "image": "diner-28.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 29,
+      "task": "Select Vitaly's meal",
+      "selector": "[for=Vitaly]",
+      "verified": true,
+      "image": "diner-29.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 30,
+      "task": "Select the items for names that start with 'Sa'",
+      "selector": "[for^=\"Sa\"]",
+      "verified": true,
+      "image": "diner-30.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 31,
+      "task": "Select the items for names that end with 'ato'",
+      "selector": "[for$=\"ato\"]",
+      "verified": true,
+      "image": "diner-31.png"
+    },
+    {
+      "game": "CSS Diner",
+      "level": 32,
+      "task": "Select the meals for names that contain 'obb'",
+      "selector": "[for*=\"obb\"]",
+      "verified": true,
+      "image": "diner-32.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": "Intro",
+      "task": "<ul>\n  <li></li>\n  <li></li>\n  <li></li>\n</ul>",
+      "selector": "li:first-child",
+      "verified": true,
+      "image": "speedrun-00.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 1,
+      "task": "<div>\n  <p></p>\n  <p class=\"foo\"></p>\n  <p></p>\n  <p></p>\n</div>",
+      "selector": "p:not(.foo)",
+      "verified": true,
+      "image": "speedrun-01.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 2,
+      "task": "<ul>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n  <li></li>\n</ul>",
+      "selector": "li:nth-child(2n+3)",
+      "verified": true,
+      "image": "speedrun-02.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 3,
+      "task": "<div>\n  <span></span>\n  <p>\n    <a></a>\n    <span></span>\n  </p>\n</div>",
+      "selector": "div > *",
+      "verified": true,
+      "image": "speedrun-03.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 4,
+      "task": "<div>\n  <span data-item=\"foo\"></span>\n  <span></span>\n  <div>\n    <span></span>\n    <span data-item=\"bar\"></span>\n    <span></span>\n  </div>\n</div>",
+      "selector": "span[data-item]",
+      "verified": true,
+      "image": "speedrun-04.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 5,
+      "task": "<div>\n  <span></span>\n  <code></code>\n  <span></span>\n  <p></p>\n  <span></span>\n  <span></span>\n  <p></p>\n  <code></code>\n  <span></span>\n  <p></p>\n</div>",
+      "selector": "p ~ span",
+      "verified": true,
+      "image": "speedrun-05.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 6,
+      "task": "<form>\n  <input />\n  <input disabled />\n  <input />\n  <input />\n  <button disabled></button>\n  <button></button>\n</form>",
+      "selector": ":enabled",
+      "verified": true,
+      "image": "speedrun-06.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 7,
+      "task": "<ol>\n  <li class=\"me\" id=\"one\"></li>\n  <li class=\"you\" id=\"two\"></li>\n  <li class=\"me\" id=\"three\"></li>\n  <li class=\"you\" id=\"four\"></li>\n  <li class=\"me\" id=\"five\"></li>\n  <li class=\"you\" id=\"six\"></li>\n  <li class=\"me\" id=\"seven\"></li>\n  <li class=\"you\" id=\"eight\"></li>\n  <li class=\"me\" id=\"nine\"></li>\n  <li class=\"you\" id=\"ten\"></li>\n</ol>",
+      "selector": "#one, #two, #five, #six, #nine",
+      "verified": true,
+      "image": "speedrun-07.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 8,
+      "task": "<div>\n  <span></span>\n  <p>\n    <a></a>\n    <span></span>\n  </p>\n  <p>\n    <span></span>\n    <a></a>\n    <span></span>\n    <span></span>\n  </p>\n  <a></a>\n  <span></span>\n</div>",
+      "selector": "a + span",
+      "verified": true,
+      "image": "speedrun-08.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 9,
+      "task": "<div id=\"foo\">\n  <div class=\"foo\"></div>\n  <div></div>\n  <div>\n    <div class=\"foo\"></div>\n    <div></div>\n  </div>\n  <div class=\"foo\"></div>\n</div>",
+      "selector": "#foo > .foo",
+      "verified": true,
+      "image": "speedrun-09.png"
+    },
+    {
+      "game": "CSS Speedrun",
+      "level": 10,
+      "task": "<div>\n  <div>\n    <span></span>\n    <code></code>\n  </div>\n  <div>\n    <code></code>\n    <span></span>\n    <code></code>\n  </div>\n  <div>\n    <span></span>\n    <code class=\"foo\"></code>\n  </div>\n  <span></span>\n  <code></code>\n</div>",
+      "selector": "div div span + code:not(.foo)",
+      "verified": true,
+      "image": "speedrun-10.png"
+    }
+  ]
+}
