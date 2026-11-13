@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.2 — Embedded JavaScript</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../lab08.css">
+  <script>
+    alert("Hello World!");
+    document.documentElement.classList.add("alert-dismissed");
+  </script>
+</head>
+<body class="lab08">
+  <main class="lab08-wrap">
+    <nav class="lab08-nav" aria-label="Điều hướng chính">
+      <a href="../../index.html">JavaScript Labs</a> <span aria-hidden="true">/</span>
+      <a href="../index.html">Lab 08</a>
+    </nav>
+    <header class="lab08-heading">
+      <p class="lab08-id">Exercise 8.2</p>
+      <h1>Embedded JavaScript</h1>
+      <p>Chạy alert() từ thẻ &lt;script&gt; trong phần &lt;head&gt; của HTML.</p>
+    </header>
+
+    <section class="lab08-panel" aria-labelledby="result-heading">
+
+      <h2 id="result-heading">Many DIVs to illustrate</h2>
+      <div class="lab08-boxes">
+        <div class="movingDiv" id="div1">This is div 1</div>
+        <div class="movingDiv" id="div2">This is div 2</div>
+        <div class="movingDiv" id="div3">This is div 3</div>
+        <div class="movingDiv" id="div4">This is div 4</div>
+        <div class="movingDiv" id="div5">This is div 5</div>
+        <div class="movingDiv" id="div6">This is div 6</div>
+      </div>
+      <p id="embedded-status" class="lab08-result" role="status">Đã đóng hộp thoại "Hello World!".</p>
+      <p>Trình duyệt chạy <code>alert("Hello World!")</code> trong phần <code>&lt;head&gt;</code> trước khi hiện nội dung. Tải lại trang để thử lại.</p>
+    </section>
+
+    <nav class="lab08-next" aria-label="Exercise trước và sau">
+      <a href="../Exercise01/index.html">← Exercise 8.1</a>
+      <a href="../Exercise03/index.html">Exercise 8.3 →</a>
+    </nav>
+  </main>
+</body>
+</html>

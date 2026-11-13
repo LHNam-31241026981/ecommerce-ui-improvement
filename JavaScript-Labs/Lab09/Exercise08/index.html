@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 9.8 | Form Validation</title>
+  <link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab09.css">
+  <script src="exercise.js"></script>
+</head>
+<body class="lab09">
+  <main class="shell lab09-shell">
+    <nav class="lab09-nav" aria-label="Đường dẫn"><a href="../">Lab 09</a><span aria-hidden="true"> / </span><span>Exercise 9.8</span></nav>
+    <h1 class="lab09-title"><span class="lab09-number">9.8</span> Form Validation</h1>
+    <p class="lab09-intro">Chặn đăng ký thiếu trường và hiển thị danh sách lỗi trong trang.</p>
+    <section class="lab09-panel form-box">
+      <h2>Đăng ký tài khoản</h2>
+      <p>Dùng dữ liệu mẫu để thử biểu mẫu.</p>
+      <form id="sampleForm" action="../form-complete.html#validation" method="get" novalidate>
+        <div class="lab09-form-fields">
+          <label for="name">Họ tên<input id="name" type="text" autocomplete="off"></label>
+          <label for="phone">Điện thoại<input id="phone" type="text" inputmode="tel" autocomplete="off"></label>
+          <label for="email">Email<input id="email" type="text" inputmode="email" autocomplete="off"></label>
+          <label for="pass">Mật khẩu<input id="pass" type="password" autocomplete="new-password"></label>
+        </div>
+        <button type="submit" class="lab09-button">Đăng ký</button>
+      </form>
+      <p id="errors" class="hidden lab09-feedback lab09-error" role="alert"></p>
+    </section>
+  </main>
+</body>
+</html>

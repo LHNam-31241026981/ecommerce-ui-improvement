@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../favicon.svg">
+  <title>Exercise 10.3 Advanced Selectors | Lab 10</title>
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab10.css">
+  <script defer src="../vendor/jquery-3.7.1.min.js"></script>
+  <script defer src="./exercise.js"></script>
+</head>
+<body class="lab10">
+  <main class="lab10-shell">
+    <nav class="lab10-nav" aria-label="Điều hướng"><a href="../">← Lab 10</a></nav>
+    <header class="lab10-head">
+      <p class="lab10-kicker">EXERCISE 10.3</p>
+      <h1>Advanced Selectors</h1>
+      <p>Đối chiếu bộ chọn theo vị trí, nội dung nhãn và kiểu trường nhập của biểu mẫu.</p>
+    </header>
+    <section class="lab10-work" aria-label="Thao tác và kết quả">
+
+      <div class="lab10-controls">
+        <button id="position-selector" type="button">Theo vị trí và nội dung</button>
+        <button id="password-selector" type="button">Theo kiểu mật khẩu</button>
+      </div>
+      <form class="lab10-form">
+        <label for="username">User Name</label>
+        <input id="username" type="text" autocomplete="username" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="pass1">Password</label>
+        <input id="pass1" type="password" autocomplete="new-password" required>
+        <label for="pass2">Password Again</label>
+        <input id="pass2" type="password" autocomplete="new-password" required>
+        <button type="submit">Register</button>
+      </form>
+      <p id="selector-status" class="lab10-result" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

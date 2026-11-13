@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.1 — Enabling/Disabling JavaScript</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../lab08.css">
+
+</head>
+<body class="lab08">
+  <main class="lab08-wrap">
+    <nav class="lab08-nav" aria-label="Điều hướng chính">
+      <a href="../../index.html">JavaScript Labs</a> <span aria-hidden="true">/</span>
+      <a href="../index.html">Lab 08</a>
+    </nav>
+    <header class="lab08-heading">
+      <p class="lab08-id">Exercise 8.1</p>
+      <h1>Enabling/Disabling JavaScript</h1>
+      <p>Đổi cài đặt JavaScript và kiểm tra hai thông báo tương ứng.</p>
+    </header>
+
+    <section class="lab08-panel" aria-labelledby="result-heading">
+      <h2 id="result-heading">Trạng thái JavaScript</h2>
+      <p id="js-enabled" class="lab08-result" hidden>You have JavaScript enabled</p>
+      <script>
+        document.getElementById("js-enabled").hidden = false;
+      </script>
+      <noscript><p class="lab08-result">You have JavaScript disabled</p></noscript>
+    </section>
+    <section class="lab08-panel" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Thử trên Chrome hoặc Edge</h2>
+      <ol>
+        <li>Mở DevTools bằng F12, sau đó nhấn Ctrl+Shift+P.</li>
+        <li>Chọn <strong>Disable JavaScript</strong>, giữ DevTools mở và tải lại trang.</li>
+        <li>Chọn <strong>Enable JavaScript</strong> và tải lại để so sánh.</li>
+      </ol>
+      <p>Trang kiểm tra trong tài liệu hiện không phân giải được tên miền. Bài này tái hiện hai trạng thái tại chỗ.</p>
+    </section>
+
+    <nav class="lab08-next" aria-label="Exercise trước và sau">
+      
+      <a href="../Exercise02/index.html">Exercise 8.2 →</a>
+    </nav>
+  </main>
+</body>
+</html>

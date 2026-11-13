@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../favicon.svg">
+  <title>Exercise 10.2 Basic Selectors | Lab 10</title>
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab10.css">
+  <script defer src="../vendor/jquery-3.7.1.min.js"></script>
+  <script defer src="./exercise.js"></script>
+</head>
+<body class="lab10">
+  <main class="lab10-shell">
+    <nav class="lab10-nav" aria-label="Điều hướng"><a href="../">← Lab 10</a></nav>
+    <header class="lab10-head">
+      <p class="lab10-kicker">EXERCISE 10.2</p>
+      <h1>Basic Selectors</h1>
+      <p>Chọn phần tử theo ID, thẻ và lớp CSS. Bấm chạy để xem các thay đổi cùng lúc.</p>
+    </header>
+    <section class="lab10-work" aria-label="Thao tác và kết quả">
+
+      <h2 id="first">DOM Example</h2>
+      <label for="msgArea">Giá trị textarea</label>
+      <textarea class="form-control" id="msgArea" rows="2" readonly></textarea>
+      <div class="lab10-controls"><button id="apply-selectors" type="button">Chạy selectors</button></div>
+      <div id="stories" class="lab10-gallery lab10-stories">
+        <figure><img src="../assets/5857298322.jpg" alt="Ảnh du lịch 1"><figcaption>Ảnh 1</figcaption></figure>
+        <figure><img src="../assets/8710320515.jpg" alt="Ảnh du lịch 2"><figcaption>Ảnh 2</figcaption></figure>
+        <figure><img src="../assets/9494464567.jpg" alt="Ảnh du lịch 3"><figcaption>Ảnh 3</figcaption></figure>
+      </div>
+      <ul id="features" class="lab10-features" aria-label="Các phần tử được chọn theo lớp">
+        <li class="center-icons">Coffee</li><li class="center-icons">Chapters</li>
+        <li class="center-icons">Presentations</li><li class="center-icons">Diagrams</li>
+      </ul>
+      <p id="selector-status" class="lab10-result" role="status">Chưa áp dụng thay đổi.</p>
+    </section>
+  </main>
+</body>
+</html>

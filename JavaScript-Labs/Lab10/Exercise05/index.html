@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../favicon.svg">
+  <title>Exercise 10.5 Inserting DOM Elements | Lab 10</title>
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab10.css">
+  <script defer src="../vendor/jquery-3.7.1.min.js"></script>
+  <script defer src="./exercise.js"></script>
+</head>
+<body class="lab10">
+  <main class="lab10-shell">
+    <nav class="lab10-nav" aria-label="Điều hướng"><a href="../">← Lab 10</a></nav>
+    <header class="lab10-head">
+      <p class="lab10-kicker">EXERCISE 10.5</p>
+      <h1>Inserting DOM Elements</h1>
+      <p>Chọn phương thức chèn để đối chiếu vị trí của ảnh so với phần tử panel.</p>
+    </header>
+    <section class="lab10-work" aria-label="Thao tác và kết quả">
+
+      <div class="lab10-controls" id="positions">
+        <button type="button" data-method="after">after()</button>
+        <button type="button" data-method="before">before()</button>
+        <button type="button" data-method="append">append()</button>
+        <button type="button" data-method="prepend">prepend()</button>
+        <button type="button" data-method="appendTo">appendTo()</button>
+        <button type="button" data-method="prependTo">prependTo()</button>
+        <button type="button" data-method="insertBefore">insertBefore()</button>
+      </div>
+      <div id="insertion-demo"><div class="lab10-insert-panel panel"><p>Nội dung có sẵn trong panel</p></div></div>
+      <p id="insertion-status" class="lab10-result" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

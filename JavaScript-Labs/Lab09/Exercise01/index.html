@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 9.1 | Basic DOM Selection</title>
+  <link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab09.css">
+</head>
+<body class="lab09">
+  <main class="shell lab09-shell">
+    <nav class="lab09-nav" aria-label="Đường dẫn"><a href="../">Lab 09</a><span aria-hidden="true"> / </span><span>Exercise 9.1</span></nav>
+    <h1 class="lab09-title"><span class="lab09-number">9.1</span> Basic DOM Selection</h1>
+    <p class="lab09-intro">Chọn phần tử, đọc nội dung, đổi thuộc tính và kiểu hiển thị.</p>
+    <section id="first" class="lab09-panel">
+      <h2 id="pageTitle">DOM Example</h2>
+      <p>Ví dụ đọc <strong>nội dung HTML</strong> và văn bản hiển thị.</p>
+      <p>Đoạn thứ hai để kiểm tra <code>querySelectorAll()</code>.</p>
+      <textarea id="msgArea" class="form-control" aria-label="Giá trị do các bộ chọn tạo ra" rows="3" readonly></textarea>
+      <button id="toggle-message" class="lab09-button" type="button" aria-controls="msgArea" aria-expanded="false">Hiện ô kết quả</button>
+    </section>
+    <section id="features" class="lab09-panel">
+      <h2>Dữ liệu để chọn theo thẻ và lớp</h2>
+      <ul class="lab09-metrics">
+        <li><strong class="count-number">20000</strong> <span>cups of coffee</span></li>
+        <li><strong class="count-number">24</strong> <span>chapters</span></li>
+        <li><strong class="count-number">48</strong> <span>presentations</span></li>
+        <li><strong class="count-number">560</strong> <span>diagrams</span></li>
+      </ul>
+    </section>
+    <section class="lab09-panel">
+      <h2>Kết quả của từng phép chọn</h2>
+      <ol class="lab09-log" id="selector-log"></ol>
+    </section>
+  </main>
+  <script src="exercise.js"></script>
+</body>
+</html>

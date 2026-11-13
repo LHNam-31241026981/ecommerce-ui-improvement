@@ -1,0 +1,258 @@
+:root {
+  color-scheme: light;
+  font-family: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #202930;
+  background: #f3f5f1;
+}
+
+.lab08 {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.lab08 [hidden] {
+  display: none;
+}
+
+.lab08-wrap {
+  width: min(960px, calc(100% - 40px));
+  margin-inline: auto;
+  padding-block: 22px 40px;
+}
+
+.lab08 a {
+  color: #18473d;
+  text-underline-offset: 0.22em;
+}
+
+.lab08 a:hover {
+  color: #0c3027;
+}
+
+.lab08 a:focus-visible,
+.lab08 button:focus-visible {
+  outline: 3px solid #0f593e;
+  outline-offset: 4px;
+}
+
+.lab08-nav,
+.lab08-next {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.lab08-next {
+  padding-top: 18px;
+  justify-content: space-between;
+}
+
+.lab08-heading {
+  padding-block: 22px 16px;
+}
+
+.lab08-heading h1 {
+  font-size: clamp(1.85rem, 5vw, 3.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.032em;
+  margin-block: 5px 10px;
+}
+
+.lab08-heading p {
+  margin: 0;
+}
+
+.lab08-id {
+  color: #315c4e;
+  font-size: 0.8rem;
+  font-weight: 760;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.lab08-list {
+  padding: 0;
+  margin-block: 12px 22px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr));
+  gap: 10px;
+}
+
+.lab08-list a,
+.lab08-panel {
+  box-sizing: border-box;
+  border: 1px solid #d3dcd4;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.lab08-list a {
+  height: 100%;
+  display: grid;
+  gap: 5px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.lab08-list a:hover {
+  border-color: #548170;
+  background: #f3faf5;
+}
+
+.lab08-list a span:last-child,
+.lab08-credit {
+  font-size: 0.92rem;
+  color: #445650;
+}
+
+.lab08-panel {
+  margin-block: 12px;
+  padding: clamp(12px, 2.5vw, 20px);
+}
+
+.lab08-panel h2 {
+  margin: 0 0 9px;
+  font-size: 1.17rem;
+  line-height: 1.35;
+}
+
+.lab08-panel h2:not(:first-child) {
+  margin-top: 12px;
+}
+
+.lab08-panel p {
+  margin-block: 8px;
+}
+
+.lab08-panel :last-child {
+  margin-bottom: 0;
+}
+
+.lab08-result {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  color: #174737;
+  background: #e8f4ec;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.lab08-result p {
+  margin: 0;
+}
+
+#console-result,
+#scope-result {
+  margin-top: 12px;
+}
+
+#scope-result {
+  white-space: pre-wrap;
+}
+
+html:not(.alert-dismissed) #embedded-status {
+  display: none;
+}
+
+.lab08-boxes,
+.lab08-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 98px), 1fr));
+  gap: 8px;
+}
+
+.lab08-tiles {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 205px), 1fr));
+}
+
+.lab08 .movingDiv,
+.lab08-tile {
+  padding: 8px 10px;
+  background: #f3f8f2;
+  border: 1px solid #cedacf;
+  border-radius: 7px;
+}
+
+.lab08 .movingDiv {
+  text-align: center;
+}
+
+.lab08-tile img {
+  display: block;
+  object-fit: contain;
+}
+
+.lab08-values {
+  display: grid;
+  grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+  gap: 2px 12px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.lab08-values dt {
+  font-weight: 650;
+}
+
+.lab08-values dd {
+  margin: 0;
+}
+
+.lab08-calendar,
+.lab08-cart {
+  width: min(100%, 480px);
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.lab08-calendar th,
+.lab08-calendar td,
+.lab08-cart th,
+.lab08-cart td {
+  border: 1px solid #cedacf;
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.lab08-calendar th,
+.lab08-cart tr:last-child {
+  color: #174737;
+  background: #e8f4ec;
+  font-weight: 700;
+}
+
+.lab08-calendar em {
+  color: #9c261c;
+}
+
+.lab08-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.lab08-actions button {
+  cursor: pointer;
+  padding: 6px 12px;
+  color: #fff;
+  background: #235443;
+  border: 1px solid #235443;
+  border-radius: 7px;
+  font: inherit;
+  font-weight: 650;
+}
+
+.lab08-actions button:hover {
+  background: #173d30;
+}
+
+.lab08 code,
+.lab08 pre {
+  font-family: "IBM Plex Mono", Consolas, monospace;
+  overflow-wrap: anywhere;
+}
+

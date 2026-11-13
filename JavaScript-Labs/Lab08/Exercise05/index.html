@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.5 — Using the Browser Console</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../lab08.css">
+  <script>console.log("script within the <head> element");</script>
+</head>
+<body class="lab08">
+  <main class="lab08-wrap">
+    <nav class="lab08-nav" aria-label="Điều hướng chính">
+      <a href="../../index.html">JavaScript Labs</a> <span aria-hidden="true">/</span>
+      <a href="../index.html">Lab 08</a>
+    </nav>
+    <header class="lab08-heading">
+      <p class="lab08-id">Exercise 8.5</p>
+      <h1>Using the Browser Console</h1>
+      <p>Đọc biến, thử lệnh và quan sát thông báo trong DevTools.</p>
+    </header>
+
+    <section class="lab08-panel" aria-labelledby="result-heading">
+      <div class="lab08-result" id="script-output">
+        <script src="js/hello.js"></script>
+        <noscript><p>This text only shown if JS is turned off</p></noscript>
+      </div>
+
+      <h2 id="result-heading">Many DIVs to illustrate</h2>
+      <div class="lab08-boxes">
+        <div class="movingDiv" id="div1">This is div 1</div>
+        <div class="movingDiv" id="div2">This is div 2</div>
+        <div class="movingDiv" id="div3">This is div 3</div>
+        <div class="movingDiv" id="div4">This is div 4</div>
+        <div class="movingDiv" id="div5">This is div 5</div>
+        <div class="movingDiv" id="div6">This is div 6</div>
+      </div>
+    </section>
+
+    <section class="lab08-panel" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Thử trong Console</h2>
+      <p>Trong DevTools, mở thẻ Console. Nhập lần lượt <code>count</code>, <code>output</code>, <code>var temp = count * 7;</code> và <code>temp</code>. Các giá trị lần lượt là <code>2</code>, <code>"&lt;br&gt;Count = 2"</code>, <code>undefined</code> và <code>14</code>.</p>
+      <p>Lỗi gõ <code>doccumment</code> có thể tái hiện riêng. Dùng nút phía dưới và xem <code>ReferenceError</code>, sau đó tải lại trang để xác nhận bản chạy dùng <code>document</code>.</p>
+      <div class="lab08-actions">
+        <button type="button" id="show-logs">In log, warn, error</button>
+        <button type="button" id="show-typo">Thử lỗi doccumment</button>
+      </div>
+      <p id="console-result" class="lab08-result" role="status" hidden></p>
+    </section>
+    <script src="js/console-demo.js"></script>
+
+
+    <nav class="lab08-next" aria-label="Exercise trước và sau">
+      <a href="../Exercise04/index.html">← Exercise 8.4</a>
+      <a href="../Exercise06/index.html">Exercise 8.6 →</a>
+    </nav>
+  </main>
+</body>
+</html>

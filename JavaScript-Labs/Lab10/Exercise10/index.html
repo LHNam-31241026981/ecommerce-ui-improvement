@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../favicon.svg">
+  <title>Exercise 10.10 jqXHR Handling | Lab 10</title>
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab10.css">
+  <script defer src="../vendor/jquery-3.7.1.min.js"></script>
+  <script defer src="./exercise.js"></script>
+</head>
+<body class="lab10">
+  <main class="lab10-shell">
+    <nav class="lab10-nav" aria-label="Điều hướng"><a href="../">← Lab 10</a></nav>
+    <header class="lab10-head">
+      <p class="lab10-kicker">EXERCISE 10.10</p>
+      <h1>jqXHR Handling</h1>
+      <p>Thử cả phản hồi JSON hợp lệ và phản hồi sai định dạng để quan sát done(), fail() và always().</p>
+    </header>
+    <section class="lab10-work" aria-label="Thao tác và kết quả">
+
+      <div class="lab10-controls">
+        <button id="consume" type="button">Tải danh sách thành phố</button>
+        <button id="consume-invalid" type="button">Thử phản hồi sai JSON</button>
+      </div>
+      <p class="animLoading" hidden><img src="../assets/ajax-loader.gif" alt=""> Đang gửi GET…</p>
+      <p id="request-status" class="lab10-result" role="status">Đang chờ yêu cầu.</p>
+      <div id="results" aria-label="Kết quả GET" aria-busy="false"><ul class="lab10-cities"></ul></div>
+      <p class="lab10-note">Luồng thành công tải bản JSON lấy từ <a href="http://www.randyconnolly.com/funwebdev/services/travel/cities.php">dịch vụ gốc của tài liệu</a> ngày 14/11/2026. Nút thử lỗi gửi GET tới một đoạn HTML và yêu cầu jQuery đọc nó thành JSON.</p>
+    </section>
+  </main>
+</body>
+</html>

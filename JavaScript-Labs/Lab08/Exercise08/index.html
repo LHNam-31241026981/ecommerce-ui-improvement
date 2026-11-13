@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.8 — JavaScript Functions</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../lab08.css">
+  <script src="lab08-walkthrough08.js"></script>
+</head>
+<body class="lab08">
+  <main class="lab08-wrap">
+    <nav class="lab08-nav" aria-label="Điều hướng chính">
+      <a href="../../index.html">JavaScript Labs</a> <span aria-hidden="true">/</span>
+      <a href="../index.html">Lab 08</a>
+    </nav>
+    <header class="lab08-heading">
+      <p class="lab08-id">Exercise 8.8</p>
+      <h1>JavaScript Functions</h1>
+      <p>Dùng tham số và giá trị trả về để sinh năm hộp, rồi kiểm tra phạm vi biến.</p>
+    </header>
+
+    <section class="lab08-panel" aria-labelledby="result-heading">
+      <h2 id="result-heading">Năm hộp từ một hàm</h2>
+      <div class="lab08-boxes">
+        <script>
+          for (let count = 1; count <= 5; count++) {
+            document.write(outputBox(count));
+          }
+        </script>
+      </div>
+    </section>
+    <section class="lab08-panel" aria-labelledby="scope-heading">
+      <h2 id="scope-heading">Kiểm tra phạm vi biến</h2>
+      <p><code>boxClass</code> được khai báo bên ngoài hàm. <code>box</code> được khai báo bằng <code>var</code> trong hàm, nên việc đọc từ bên ngoài sẽ tạo <code>ReferenceError</code>.</p>
+      <div class="lab08-actions">
+        <button type="button" id="test-scope">So sánh có var và bỏ var</button>
+      </div>
+      <pre id="scope-result" class="lab08-result" role="status" hidden></pre>
+    </section>
+    <script src="scope-demo.js"></script>
+
+    <nav class="lab08-next" aria-label="Exercise trước và sau">
+      <a href="../Exercise07/index.html">← Exercise 8.7</a>
+      <a href="../Exercise09/index.html">Exercise 8.9 →</a>
+    </nav>
+  </main>
+</body>
+</html>

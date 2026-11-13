@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 8.9 — Functions as Objects</title>
+  <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../lab08.css">
+  <script src="lab08-walkthrough09.js"></script>
+</head>
+<body class="lab08">
+  <main class="lab08-wrap">
+    <nav class="lab08-nav" aria-label="Điều hướng chính">
+      <a href="../../index.html">JavaScript Labs</a> <span aria-hidden="true">/</span>
+      <a href="../index.html">Lab 08</a>
+    </nav>
+    <header class="lab08-heading">
+      <p class="lab08-id">Exercise 8.9</p>
+      <h1>Functions as Objects</h1>
+      <p>Truyền hàm tính thuế làm đối số và định dạng tổng tiền.</p>
+    </header>
+
+    <section class="lab08-panel" aria-labelledby="result-heading">
+      <h2 id="result-heading">Giỏ hàng mẫu</h2>
+      <table class="lab08-cart">
+        <tbody>
+          <tr><th scope="row">Price</th><td>$15.00</td></tr>
+          <tr><th scope="row">Quantity</th><td>2</td></tr>
+          <tr><th scope="row">Tax</th><td>$1.50</td></tr>
+          <tr>
+            <th scope="row">Total</th>
+            <td id="total">
+              <script>
+                const amount = calculateTotal(15, 2);
+                document.write("$" + amount.toFixed(2));
+              </script>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p><code>calculateTax</code> nhận một hàm ẩn danh làm đối số. Quy tắc minh họa trong đề áp dụng thuế 5% khi <code>isCanadian</code> là <code>true</code>.</p>
+    </section>
+
+    <nav class="lab08-next" aria-label="Exercise trước và sau">
+      <a href="../Exercise08/index.html">← Exercise 8.8</a>
+      <a href="../Exercise10/index.html">Exercise 8.10 →</a>
+    </nav>
+  </main>
+</body>
+</html>

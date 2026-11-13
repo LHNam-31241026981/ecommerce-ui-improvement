@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 9.2 | DOM Family Relations</title>
+  <link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab09.css">
+</head>
+<body class="lab09">
+  <main class="shell lab09-shell">
+    <nav class="lab09-nav" aria-label="Đường dẫn"><a href="../">Lab 09</a><span aria-hidden="true"> / </span><span>Exercise 9.2</span></nav>
+    <h1 class="lab09-title"><span class="lab09-number">9.2</span> DOM Family Relations</h1>
+    <p class="lab09-intro">Duyệt qua nút con, nút anh em và nút cha trong cây DOM.</p>
+    <section class="lab09-panel" id="first">
+      <h2>Quan hệ trong cây DOM</h2>
+      <pre id="family-log" class="lab09-output"></pre>
+    </section>
+    <section id="stories" aria-label="Các phần tử con của stories">
+      <article><img src="../images/5857298322.jpg" alt="Những tòa nhà phía sau đồng cỏ" width="480" height="320"><h2>Ảnh số 1</h2></article>
+      <article><img src="../images/8710320515.jpg" alt="Nhà thờ trắng dưới bầu trời xanh" width="480" height="320"><h2>Ảnh số 2</h2></article>
+      <article><img src="../images/9494464567.jpg" alt="Kênh đào ở Venice" width="480" height="320"><h2>Ảnh số 3</h2></article>
+    </section>
+    <pre id="children-log" class="lab09-output" aria-label="Các childNodes của stories"></pre>
+  </main>
+  <script src="exercise.js"></script>
+</body>
+</html>

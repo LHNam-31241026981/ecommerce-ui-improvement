@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 9.6 | Debugging Events</title>
+  <link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab09.css">
+  <script src="exercise.js"></script>
+</head>
+<body class="lab09">
+  <main class="shell lab09-shell">
+    <nav class="lab09-nav" aria-label="Đường dẫn"><a href="../">Lab 09</a><span aria-hidden="true"> / </span><span>Exercise 9.6</span></nav>
+    <h1 class="lab09-title"><span class="lab09-number">9.6</span> Debugging Events</h1>
+    <p class="lab09-intro">Dùng breakpoint để quan sát đối tượng sự kiện và e.target.</p>
+    <section class="lab09-panel">
+      <h2>Thử sự kiện và đọc <code>event.target</code></h2>
+      <div class="lab09-boxes">
+      <button type="button" class="movingDiv" id="div1">This is div 1</button>
+      <button type="button" class="movingDiv" id="div2">This is div 2</button>
+      <button type="button" class="movingDiv" id="div3">This is div 3</button>
+      <button type="button" class="movingDiv" id="div4">This is div 4</button>
+      <button type="button" class="movingDiv" id="div5">This is div 5</button>
+      </div>
+      <p id="debug-result" class="lab09-feedback" aria-live="polite">Đưa chuột lên một ô hoặc chọn bằng bàn phím.</p>
+      <details>
+        <summary>Mở hướng dẫn đặt breakpoint</summary>
+        <p>Mở tab Sources trong Chrome hoặc Debugger trong Firefox, chọn <code>exercise.js</code> và đặt breakpoint tại dòng <code>alert</code>. Khi đưa chuột lên một ô, xem <code>e.type</code>, <code>e.target</code> và <code>e.target.id</code>, sau đó tiếp tục chạy.</p>
+        <p>Để thử dừng trong lúc tải trang như bước đầu của tài liệu, mở Exercise 9.5, đặt breakpoint trước lệnh <code>alert</code> và tải lại trang.</p>
+      </details>
+    </section>
+  </main>
+</body>
+</html>

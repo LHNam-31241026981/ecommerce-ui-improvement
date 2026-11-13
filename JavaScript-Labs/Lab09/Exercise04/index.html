@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 9.4 | Simple Event Handling</title>
+  <link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/labs.css">
+  <link rel="stylesheet" href="../lab09.css">
+</head>
+<body class="lab09">
+  <main class="shell lab09-shell">
+    <nav class="lab09-nav" aria-label="Đường dẫn"><a href="../">Lab 09</a><span aria-hidden="true"> / </span><span>Exercise 9.4</span></nav>
+    <h1 class="lab09-title"><span class="lab09-number">9.4</span> Simple Event Handling</h1>
+    <p class="lab09-intro">Xử lý click, mouseover và mouseout, kết hợp chuyển tiếp CSS.</p>
+    <section id="main" class="lab09-panel event-panel">
+      <figure>
+        <img src="../images/8711645510.jpg" id="mainImage" alt="Hình minh họa để thử chuyển sang ảnh xám">
+        <figcaption>Đưa chuột vào và ra khỏi ảnh. Trên màn hình cảm ứng, dùng nút đổi màu.</figcaption>
+      </figure>
+      <div class="event-buttons">
+        <button class="lab09-button" id="testButton" type="button" aria-controls="content" aria-expanded="true">Hide</button>
+        <button class="lab09-button" id="imageButton" type="button" aria-pressed="false">Đổi màu ảnh</button>
+      </div>
+      <p id="content" class="makeItNormal">Đoạn văn chuyển dần sang trong suốt trước khi ẩn. Khi hiện lại, trình duyệt khôi phục phần hiển thị trước rồi mới tăng độ mờ.</p>
+      <p id="event-status" class="lab09-feedback" aria-live="polite">Đang hiển thị đoạn văn.</p>
+    </section>
+  </main>
+  <script src="exercise.js"></script>
+</body>
+</html>
