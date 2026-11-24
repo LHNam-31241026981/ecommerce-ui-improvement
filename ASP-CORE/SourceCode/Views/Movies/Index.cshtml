@@ -1,0 +1,74 @@
+@model Filmora.ViewModels.CatalogViewModel
+@inject Filmora.Services.PosterStorage Posters
+@using System.Globalization
+@{
+    ViewData["Title"] = "Lịch phim";
+    var currency = CultureInfo.GetCultureInfo("vi-VN");
+}
+<header class="page-heading catalog-heading">
+    <div>
+        <h1>Lịch phim</h1>
+        <p class="muted">Khám phá những bộ phim sắp chiếu và chọn vé cho buổi xem tiếp theo.</p>
+    </div>
+    @if (User.IsInRole("Admin"))
+    {
+        <a class="button button-secondary" asp-action="Manage">Quản lý phim</a>
+    }
+</header>
+
+<form class="panel catalog-filter form-grid" asp-action="Index" method="get">
+    <div class="field">
+        <label for="searchString">Tìm theo tên phim</label>
+        <input id="searchString" name="searchString" type="search" value="@Model.SearchString" placeholder="Nhập tên phim" maxlength="200" />
+    </div>
+    <div class="field">
+        <label asp-for="GenreId">Thể loại</label>
+        <select asp-for="GenreId" asp-items="Model.Genres"><option value="">Tất cả thể loại</option></select>
+    </div>
+    <div class="form-actions">
+        <button class="button button-primary" type="submit">Tìm phim</button>
+        @if (!string.IsNullOrEmpty(Model.SearchString) || Model.GenreId.HasValue)
+        {
+            <a class="button button-secondary" asp-action="Index">Xóa bộ lọc</a>
+        }
+    </div>
+</form>
+
+@if (Model.Movies.Count == 0)
+{
+    <section class="empty-state">
+        <h2>Chưa tìm thấy phim</h2>
+        <p>Thử một tên phim hoặc thể loại khác.</p>
+        <a class="button button-secondary" asp-action="Index">Xem toàn bộ lịch phim</a>
+    </section>
+}
+else
+{
+    <p class="catalog-count">@Model.Movies.Count phim</p>
+    <section class="product-grid" aria-label="Danh sách phim">
+        @foreach (var movie in Model.Movies)
+        {
+            <article class="product-card">
+                <a asp-action="Details" asp-route-id="@movie.Id" aria-label="Xem chi tiết @movie.Title">
+                    <img class="poster" src="@Url.Content(Posters.DisplayPath(movie.PicturePath))" alt="" loading="lazy" />
+                </a>
+                <div class="product-body">
+                    <div class="product-meta">
+                        <span class="tag">@movie.Genre.Name</span>
+                        <span aria-label="Điểm @movie.Rated trên 5">★ @movie.Rated/5</span>
+                    </div>
+                    <h2><a asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a></h2>
+                    <p class="muted"><time datetime="@movie.ReleaseDate.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)">@movie.ReleaseDate.ToString("dd/MM/yyyy")</time></p>
+                    <div class="product-meta">
+                        <strong class="price">@movie.Price.ToString("N0", currency) ₫</strong>
+                        <form asp-controller="Cart" asp-action="Add" asp-antiforgery="true" method="post">
+                            <input type="hidden" name="movieId" value="@movie.Id" />
+                            <input type="hidden" name="quantity" value="1" />
+                            <button class="button button-primary" type="submit" aria-label="Thêm vé phim @movie.Title vào giỏ">Thêm vé</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        }
+    </section>
+}

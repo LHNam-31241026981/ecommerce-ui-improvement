@@ -1,0 +1,10 @@
+@model Filmora.ViewModels.GenreInput
+@{ ViewData["Title"] = "Sửa thể loại"; }
+<header class="page-heading"><h1>Sửa thể loại</h1></header>
+<form class="panel" asp-action="Edit" asp-route-id="@Model.Id" asp-antiforgery="true" method="post">
+    <partial name="_Fields" model="Model" />
+    <div class="form-actions">
+        <button class="button button-primary" type="submit">Lưu thay đổi</button>
+        <a class="button button-secondary" asp-action="Index">Hủy</a>
+    </div>
+</form>

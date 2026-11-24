@@ -1,0 +1,20 @@
+@model (Filmora.Models.Genre Genre, int MovieCount)
+@{ ViewData["Title"] = "Xóa thể loại"; }
+<header class="page-heading"><h1>Xóa thể loại</h1></header>
+<section class="panel">
+    <h2>@Model.Genre.Name</h2>
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    @if (Model.MovieCount == 0)
+    {
+        <p>Bạn có muốn xóa thể loại này?</p>
+        <form class="form-actions" asp-action="Delete" asp-route-id="@Model.Genre.Id" asp-antiforgery="true" method="post">
+            <button class="button button-danger" type="submit">Xác nhận xóa</button>
+            <a class="button button-secondary" asp-action="Index">Quay lại</a>
+        </form>
+    }
+    else
+    {
+        <p>Thể loại này đang được dùng cho @Model.MovieCount phim. Hãy chuyển các phim sang thể loại khác để tiếp tục.</p>
+        <a class="button button-secondary" asp-action="Index">Quay lại</a>
+    }
+</section>

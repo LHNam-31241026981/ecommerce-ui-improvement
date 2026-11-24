@@ -1,0 +1,10 @@
+@model Filmora.ViewModels.MovieInput
+@{ ViewData["Title"] = "Thêm phim"; }
+<header class="page-heading"><h1>Thêm phim</h1></header>
+<form class="panel" asp-action="Create" asp-antiforgery="true" method="post" enctype="multipart/form-data">
+    <partial name="_Fields" model="Model" />
+    <div class="form-actions">
+        <button class="button button-primary" type="submit">Lưu phim</button>
+        <a class="button button-secondary" asp-action="Manage">Hủy</a>
+    </div>
+</form>

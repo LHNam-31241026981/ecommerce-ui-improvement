@@ -1,0 +1,10 @@
+@model (Filmora.Models.Genre Genre, int MovieCount)
+@{ ViewData["Title"] = Model.Genre.Name; }
+<header class="page-heading"><h1>@Model.Genre.Name</h1></header>
+<section class="panel">
+    <p>Có <strong>@Model.MovieCount</strong> phim thuộc thể loại này.</p>
+    <div class="form-actions">
+        <a class="button button-secondary" asp-action="Index">Quay lại</a>
+        <a class="button button-primary" asp-action="Edit" asp-route-id="@Model.Genre.Id">Sửa thể loại</a>
+    </div>
+</section>

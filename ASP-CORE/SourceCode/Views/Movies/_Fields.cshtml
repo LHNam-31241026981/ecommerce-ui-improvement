@@ -1,0 +1,57 @@
+@model Filmora.ViewModels.MovieInput
+@inject Filmora.Services.PosterStorage Posters
+@using System.Globalization
+<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+<div class="form-grid">
+    <div class="field">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" required minlength="3" maxlength="200" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="GenreId"></label>
+        <select asp-for="GenreId" asp-items="Model.Genres" required><option value="">Chọn thể loại</option></select>
+        <span asp-validation-for="GenreId" class="text-danger"></span>
+        @if (!Model.Genres.Any())
+        {
+            <small><a asp-controller="Genres" asp-action="Create">Thêm thể loại</a> trước khi lưu phim.</small>
+        }
+    </div>
+    <div class="field">
+        <label asp-for="ReleaseDate"></label>
+        <input asp-for="ReleaseDate" asp-format="{0:yyyy-MM-dd}" type="date" min="@Filmora.ViewModels.MovieInput.TodayInVietnam.AddDays(1).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" required />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" asp-format="{0:0}" type="number" min="5001" max="999999999" step="1" required />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="Rated"></label>
+        <select asp-for="Rated" required>
+            <option value="">Chọn điểm</option>
+            @for (var score = 1; score <= 5; score++)
+            {
+                <option value="@score">@score / 5</option>
+            }
+        </select>
+        <span asp-validation-for="Rated" class="text-danger"></span>
+    </div>
+    <div class="field">
+        <label asp-for="Poster"></label>
+        <input asp-for="Poster" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="poster-help" />
+        <small id="poster-help">JPG, PNG hoặc WebP, tối đa 4 MB.</small>
+        <span asp-validation-for="Poster" class="text-danger"></span>
+        @if (!string.IsNullOrWhiteSpace(Model.CurrentPoster))
+        {
+            <img src="@Url.Content(Posters.DisplayPath(Model.CurrentPoster))" width="88" alt="Poster hiện tại" />
+            <small>Để trống nếu giữ poster hiện tại.</small>
+        }
+    </div>
+    <div class="field field-wide">
+        <label asp-for="Summary"></label>
+        <textarea asp-for="Summary" rows="5" required minlength="11" maxlength="1500"></textarea>
+        <span asp-validation-for="Summary" class="text-danger"></span>
+    </div>
+</div>

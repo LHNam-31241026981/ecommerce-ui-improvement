@@ -1,0 +1,17 @@
+@model Filmora.ViewModels.CheckoutCompletedViewModel
+@{
+    ViewData["Title"] = "Xác nhận đơn hàng";
+    var culture = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+}
+
+<section class="empty-state">
+    <h1>Đặt hàng thành công</h1>
+    <p>Rạp Mở đã nhận đơn hàng của bạn.</p>
+    <dl>
+        <dt>Mã đơn hàng</dt>
+        <dd><strong>#@Model.OrderNumber.ToString("D6")</strong></dd>
+        <dt>Tổng giá trị đơn hàng</dt>
+        <dd><strong>@Model.Total.ToString("#,0.##", culture) ₫</strong></dd>
+    </dl>
+    <a class="button button-primary" asp-controller="Movies" asp-action="Index">Tiếp tục chọn phim</a>
+</section>

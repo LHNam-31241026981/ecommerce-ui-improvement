@@ -1,0 +1,35 @@
+@model IReadOnlyList<Filmora.Models.Genre>
+@{ ViewData["Title"] = "Quản lý thể loại"; }
+<header class="page-heading">
+    <h1>Quản lý thể loại</h1>
+    <div class="form-actions">
+        <a class="button button-secondary" asp-controller="Movies" asp-action="Manage">Quản lý phim</a>
+        <a class="button button-primary" asp-action="Create">Thêm thể loại</a>
+    </div>
+</header>
+@if (Model.Count == 0)
+{
+    <section class="empty-state"><h2>Chưa có thể loại</h2><p>Thêm thể loại để phân loại phim trong lịch chiếu.</p></section>
+}
+else
+{
+    <div class="panel table-wrap">
+        <table class="data-table">
+            <thead><tr><th scope="col">Thể loại</th><th scope="col">Thao tác</th></tr></thead>
+            <tbody>
+            @foreach (var genre in Model)
+            {
+                <tr>
+                    <th scope="row"><a asp-action="Details" asp-route-id="@genre.Id">@genre.Name</a></th>
+                    <td>
+                        <div class="form-actions">
+                            <a class="button button-secondary" asp-action="Edit" asp-route-id="@genre.Id">Sửa</a>
+                            <a class="button button-danger" asp-action="Delete" asp-route-id="@genre.Id">Xóa</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

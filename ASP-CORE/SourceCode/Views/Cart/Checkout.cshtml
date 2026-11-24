@@ -1,0 +1,78 @@
+@model Filmora.ViewModels.CheckoutViewModel
+@{
+    ViewData["Title"] = "Đặt hàng";
+    var culture = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+}
+
+<header class="page-heading">
+    <h1>Đặt hàng</h1>
+    <p>Kiểm tra đơn hàng và điền thông tin người nhận.</p>
+</header>
+
+<div class="form-grid checkout-layout">
+    <form class="panel" asp-action="Checkout" method="post">
+        <h2>Thông tin giao hàng</h2>
+        <input asp-for="Reference" type="hidden" />
+        <input asp-for="PreviewToken" type="hidden" />
+        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+        <div class="field">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" autocomplete="name" maxlength="100" required />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" type="email" autocomplete="email" maxlength="254" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Mobile"></label>
+            <input asp-for="Mobile" type="tel" autocomplete="tel" maxlength="25" required />
+            <span asp-validation-for="Mobile" class="text-danger"></span>
+        </div>
+        <div class="field">
+            <label asp-for="Address"></label>
+            <textarea asp-for="Address" autocomplete="street-address" maxlength="300" rows="3" required></textarea>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <div class="form-actions">
+            <a class="button button-secondary" asp-action="Index">Về giỏ hàng</a>
+            <button type="submit" class="button button-primary">Xác nhận đặt hàng</button>
+        </div>
+    </form>
+
+    <section class="panel" aria-labelledby="order-summary">
+        <h2 id="order-summary">Đơn hàng của bạn</h2>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Phim</th>
+                        <th scope="col">Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.Cart.Lines)
+                    {
+                        <tr>
+                            <th scope="row">@line.Title × @line.Quantity</th>
+                            <td>@line.Subtotal.ToString("#,0.##", culture) ₫</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row">Tổng cộng</th>
+                        <td><strong>@Model.Cart.Total.ToString("#,0.##", culture) ₫</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

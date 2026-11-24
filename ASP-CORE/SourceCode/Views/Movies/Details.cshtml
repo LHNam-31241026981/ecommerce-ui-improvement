@@ -1,0 +1,38 @@
+@model Filmora.Models.Movie
+@inject Filmora.Services.PosterStorage Posters
+@using System.Globalization
+@{
+    ViewData["Title"] = Model.Title;
+    var currency = CultureInfo.GetCultureInfo("vi-VN");
+}
+<header class="page-heading">
+    <a class="button button-secondary" asp-action="Index">← Lịch phim</a>
+    @if (User.IsInRole("Admin"))
+    {
+        <a class="button button-secondary" asp-action="Edit" asp-route-id="@Model.Id">Sửa phim</a>
+    }
+</header>
+<article class="panel movie-detail">
+    <div class="movie-detail-poster">
+        <img class="poster" src="@Url.Content(Posters.DisplayPath(Model.PicturePath))" alt="Poster @Model.Title" />
+    </div>
+    <div class="movie-detail-content">
+        <span class="tag">@Model.Genre.Name</span>
+        <h1>@Model.Title</h1>
+        <div class="product-meta">
+            <p>Phát hành <strong>@Model.ReleaseDate.ToString("dd/MM/yyyy")</strong></p>
+            <p aria-label="Điểm @Model.Rated trên 5">★ @Model.Rated/5</p>
+        </div>
+        <h2>Tóm tắt</h2>
+        <p class="movie-summary">@Model.Summary</p>
+        <p class="price"><strong>@Model.Price.ToString("N0", currency) ₫</strong> / vé</p>
+        <form class="form-actions" asp-controller="Cart" asp-action="Add" asp-antiforgery="true" method="post">
+            <input type="hidden" name="movieId" value="@Model.Id" />
+            <div class="field">
+                <label for="quantity">Số lượng vé</label>
+                <input id="quantity" type="number" name="quantity" min="1" max="@Filmora.Services.CartService.MaxQuantity" step="1" value="1" required />
+            </div>
+            <button class="button button-primary" type="submit">Thêm vé vào giỏ</button>
+        </form>
+    </div>
+</article>

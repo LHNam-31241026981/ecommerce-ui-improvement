@@ -1,0 +1,7 @@
+@model Filmora.ViewModels.GenreInput
+<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+<div class="field">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" required maxlength="80" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>

@@ -1,0 +1,103 @@
+@model Filmora.ViewModels.CartViewModel
+@{
+    ViewData["Title"] = "Giỏ hàng";
+    var culture = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+}
+
+<header class="page-heading">
+    <h1>Giỏ hàng</h1>
+    @if (Model.Count > 0)
+    {
+        <p>@Model.Count sản phẩm</p>
+    }
+</header>
+
+@if (TempData["CartError"] is string error)
+{
+    <p class="alert text-danger" role="alert">@error</p>
+}
+@if (TempData["CartSuccess"] is string success)
+{
+    <p class="alert" role="status">@success</p>
+}
+
+@if (Model.Lines.Count == 0 && Model.UnavailableMovieIds.Count == 0)
+{
+    <section class="empty-state">
+        <h2>Giỏ hàng đang trống</h2>
+        <a class="button button-primary" asp-controller="Movies" asp-action="Index">Khám phá phim</a>
+    </section>
+}
+else
+{
+    <section class="panel">
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Phim trong giỏ hàng">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Phim</th>
+                        <th scope="col">Đơn giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Thành tiền</th>
+                        <th scope="col">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var line in Model.Lines)
+                    {
+                        <tr>
+                            <th scope="row">
+                                <a asp-controller="Movies" asp-action="Details" asp-route-id="@line.MovieId">@line.Title</a>
+                            </th>
+                            <td>@line.Price.ToString("#,0.##", culture) ₫</td>
+                            <td>
+                                <form class="cart-quantity" asp-action="Update" method="post">
+                                    <input type="hidden" name="movieId" value="@line.MovieId" />
+                                    <input type="number" name="quantity" value="@line.Quantity" min="1" max="@Filmora.Services.CartService.MaxQuantity"
+                                           required aria-label="Số lượng phim @line.Title" />
+                                    <button type="submit" class="button button-secondary">Cập nhật</button>
+                                </form>
+                            </td>
+                            <td>@line.Subtotal.ToString("#,0.##", culture) ₫</td>
+                            <td>
+                                <form asp-action="Remove" method="post">
+                                    <input type="hidden" name="movieId" value="@line.MovieId" />
+                                    <button type="submit" class="button button-danger" aria-label="Xóa phim @line.Title khỏi giỏ">Xóa</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    @foreach (var movieId in Model.UnavailableMovieIds)
+                    {
+                        <tr>
+                            <th scope="row" colspan="4">Phim #@movieId đã ngừng bán</th>
+                            <td>
+                                <form asp-action="Remove" method="post">
+                                    <input type="hidden" name="movieId" value="@movieId" />
+                                    <button type="submit" class="button button-danger">Xóa khỏi giỏ</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="3">Tổng cộng</th>
+                        <td colspan="2"><strong>@Model.Total.ToString("#,0.##", culture) ₫</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="form-actions">
+            <a class="button button-secondary" asp-controller="Movies" asp-action="Index">Tiếp tục chọn phim</a>
+            @if (Model.CanCheckout)
+            {
+                <a class="button button-primary" asp-action="Checkout">Tiến hành đặt hàng</a>
+            }
+            else
+            {
+                <p role="status">Xóa phim đã ngừng bán để tiếp tục đặt hàng.</p>
+            }
+        </div>
+    </section>
+}

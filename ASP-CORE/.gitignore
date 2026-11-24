@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/publish/
+**/.vs/
+*.user
+*.mdf
+*.ldf
+*.db
+*.log
+**/wwwroot/uploads/posters/
+appsettings.Local.json

@@ -1,0 +1,48 @@
+@inject Filmora.Services.CartService Cart
+@{
+    var cartCount = await Cart.CountAsync();
+    var activeController = ViewContext.RouteData.Values["controller"] as string;
+    var activeAction = ViewContext.RouteData.Values["action"] as string;
+}
+<!doctype html>
+<html lang="vi" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Rạp Mở. Xem lịch phim, chọn vé và đặt hàng trực tuyến." />
+    <title>@ViewData["Title"] · Rạp Mở</title>
+    <link rel="icon" href="~/images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Đến nội dung chính</a>
+    <header class="site-header">
+        <nav class="site-nav site-width" aria-label="Điều hướng chính">
+            <a class="brand" asp-area="" asp-controller="Movies" asp-action="Index"><span class="brand-mark" aria-hidden="true">▶</span> Rạp Mở</a>
+            <div class="nav-links">
+                <a asp-area="" asp-controller="Movies" asp-action="Index" class="@(activeController == "Movies" && activeAction == "Index" ? "current" : null)">Lịch phim</a>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-area="" asp-controller="Movies" asp-action="Manage">Quản lý phim</a>
+                    <a asp-area="" asp-controller="Genres" asp-action="Index">Thể loại</a>
+                }
+            </div>
+            <div class="nav-account">
+                <a asp-area="" asp-controller="Cart" asp-action="Index" class="nav-cart">Giỏ hàng <span>@cartCount</span></a>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+    </header>
+    <main id="main-content" class="site-width site-main">
+        @RenderBody()
+    </main>
+    <footer class="site-footer">
+        <div class="site-width footer-inner">
+            <span class="footer-brand">Rạp Mở</span>
+            <span>&copy; @DateTime.Now.Year · 31241026981 · Lê Hoàng Nam</span>
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,12 @@
+@model Filmora.Models.Movie
+@{ ViewData["Title"] = "Xóa phim"; }
+<header class="page-heading"><h1>Xóa phim</h1></header>
+<section class="panel">
+    <h2>@Model.Title</h2>
+    <p>Bạn có muốn xóa phim này khỏi lịch phim?</p>
+    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+    <form class="form-actions" asp-action="Delete" asp-route-id="@Model.Id" asp-antiforgery="true" method="post">
+        <button class="button button-danger" type="submit">Xác nhận xóa</button>
+        <a class="button button-secondary" asp-action="Manage">Quay lại</a>
+    </form>
+</section>
