@@ -1,6 +1,12 @@
 @model Filmora.ViewModels.MovieInput
 @inject Filmora.Services.PosterStorage Posters
 @using System.Globalization
+@{
+    var today = Filmora.ViewModels.MovieInput.TodayInVietnam;
+    var minimumReleaseDate = Model.ExistingReleaseDate <= today
+        ? null
+        : today.AddDays(1).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+}
 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 <div class="form-grid">
     <div class="field">
@@ -19,7 +25,11 @@
     </div>
     <div class="field">
         <label asp-for="ReleaseDate"></label>
-        <input asp-for="ReleaseDate" asp-format="{0:yyyy-MM-dd}" type="date" min="@Filmora.ViewModels.MovieInput.TodayInVietnam.AddDays(1).ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)" required />
+        <input asp-for="ReleaseDate" asp-format="{0:yyyy-MM-dd}" type="date" min="@minimumReleaseDate" required />
+        @if (minimumReleaseDate is null)
+        {
+            <small>Có thể giữ ngày phát hành đã lưu hoặc chọn ngày mới sau hôm nay.</small>
+        }
         <span asp-validation-for="ReleaseDate" class="text-danger"></span>
     </div>
     <div class="field">

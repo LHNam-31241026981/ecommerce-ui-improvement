@@ -47,13 +47,13 @@ public class MovieInput : IValidatableObject
     [BindNever]
     public int Id { get; set; }
 
+    [BindNever]
+    public DateOnly? ExistingReleaseDate { get; set; }
+
     public static DateOnly TodayInVietnam => DateOnly.FromDateTime(DateTimeOffset.UtcNow.ToOffset(TimeSpan.FromHours(7)).DateTime);
 
     public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
     {
-        if (ReleaseDate <= TodayInVietnam)
-            yield return new ValidationResult("Ngày phát hành phải sau hôm nay.", [nameof(ReleaseDate)]);
-
         if (Price is decimal price && decimal.Truncate(price) != price)
             yield return new ValidationResult("Giá vé phải là số nguyên đồng.", [nameof(Price)]);
 

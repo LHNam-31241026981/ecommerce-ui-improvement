@@ -33,7 +33,9 @@ builder.Services.AddSession(options =>
 builder.Services.AddScoped<PosterStorage>();
 builder.Services.AddScoped<CartService>();
 builder.Services.AddScoped<OrderEmailService>();
-if (!builder.Environment.IsDevelopment() || !string.IsNullOrWhiteSpace(builder.Configuration["Email:Address"]))
+var hasSmtpCredentials = !string.IsNullOrWhiteSpace(builder.Configuration["Email:Address"])
+    && !string.IsNullOrWhiteSpace(builder.Configuration["Email:AppPassword"]);
+if (!builder.Environment.IsDevelopment() || hasSmtpCredentials)
     builder.Services.AddTransient<Microsoft.AspNetCore.Identity.UI.Services.IEmailSender, IdentityEmailSender>();
 
 var app = builder.Build();

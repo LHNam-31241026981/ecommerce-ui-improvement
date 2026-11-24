@@ -62,6 +62,7 @@ public class MoviesController(ApplicationDbContext db, PosterStorage posters, IL
             Title = movie.Title,
             Summary = movie.Summary,
             ReleaseDate = movie.ReleaseDate,
+            ExistingReleaseDate = movie.ReleaseDate,
             GenreId = movie.GenreId,
             Price = movie.Price,
             Rated = movie.Rated,
@@ -124,6 +125,11 @@ public class MoviesController(ApplicationDbContext db, PosterStorage posters, IL
     private async Task<IActionResult> SaveAsync(Movie movie, MovieInput input, string viewName, CancellationToken cancellationToken)
     {
         input.Id = movie.Id;
+        input.ExistingReleaseDate = movie.Id == 0 ? null : movie.ReleaseDate;
+        if (input.ReleaseDate is DateOnly releasedOn && releasedOn <= MovieInput.TodayInVietnam
+            && releasedOn != input.ExistingReleaseDate)
+            ModelState.AddModelError(nameof(input.ReleaseDate), "Ngày phát hành mới phải sau hôm nay.");
+
         input.CurrentPoster = movie.PicturePath;
         if (input.GenreId is int genreId && !await db.Genres.AnyAsync(genre => genre.Id == genreId, cancellationToken))
             ModelState.AddModelError(nameof(input.GenreId), "Thể loại đã chọn không tồn tại.");

@@ -35,6 +35,10 @@
         </nav>
     </header>
     <main id="main-content" class="site-width site-main">
+        @if (TempData["Success"] is string success)
+        {
+            <p class="alert" role="status">@success</p>
+        }
         @RenderBody()
     </main>
     <footer class="site-footer">
