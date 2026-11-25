@@ -1,0 +1,61 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 2rem;
+  font: 16px/1.5 Verdana, sans-serif;
+  color: #263238;
+}
+main { max-width: 800px; margin: auto; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; }
+button, select { padding: .65rem; font: inherit; max-width: 100%; }
+button { cursor: pointer; }
+button:focus-visible, select:focus-visible { outline: 3px solid #174ea6; outline-offset: 3px; }
+.stage {
+  min-height: clamp(400px, 69vh, 550px);
+  overflow: hidden;
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f3f5f4;
+  border: 1px solid #d5d9d7;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 1rem 0;
+  background: green;
+  transform: scale(1) rotate(0);
+}
+.box[data-variant="one"] { animation: animOne 1.5s ease-out .5s infinite alternate paused; }
+.box[data-variant="two"] { animation: animTwo 5s ease-out 1s 3 paused; }
+.box.is-playing { animation-play-state: running; }
+
+@keyframes animOne {
+  from { opacity: 1; transform: scale(1) rotate(0); margin-left: 0; }
+  to { opacity: .5; transform: scale(1.5) rotate(90deg); margin-left: min(400px, 50vw); }
+}
+@keyframes animTwo {
+  25% {
+    background: #ba1f28;
+    transform: scale(1.5) rotate(90deg);
+    margin-left: min(400px, 50vw);
+  }
+  50% {
+    background: #eabf1d;
+    transform: scale(1);
+    margin-top: min(400px, 39vh);
+    border-radius: 50%;
+  }
+  75% {
+    background: #2341c9;
+    transform: scale(.5);
+    margin-left: 2rem;
+  }
+  100% {
+    background: green;
+    border-radius: 0;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .box[data-variant] { animation: none; }
+}

@@ -1,0 +1,93 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f4ed;
+  --ink: #151e31;
+  --subtle: #4f596b;
+  --line: #d9d5ca;
+  --blue: #2138ce;
+  --blue-deep: #18299e;
+  --white: #fefcf8;
+  --gold: #ffd46f;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 20px; }
+body { margin: 0; }
+a { color: var(--blue-deep); text-underline-offset: .18em; }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.wrap { width: min(1216px, calc(100% - 80px)); margin-inline: auto; }
+.skip { position: absolute; left: 12px; top: -200px; padding: 10px; background: white; }
+.skip:focus { top: 8px; z-index: 10; }
+.topbar { min-height: 78px; display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); }
+.topbar a { text-decoration: none; font-weight: 650; }
+.topbar nav { display: flex; flex-wrap: wrap; justify-content: flex-end; column-gap: 25px; row-gap: 8px; font-size: .92rem; }
+.topbar a:hover, .inline-link:hover { text-decoration: underline; }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); white-space: nowrap; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; background: var(--blue); color: white; border-radius: 4px; font-family: Georgia, serif; font-size: 1.05rem; }
+.hero { padding-block: 59px 64px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(35px, 6vw, 88px); align-items: center; }
+.kicker { color: var(--blue-deep); font-weight: 800; font-size: .71rem; letter-spacing: .12em; margin: 0 0 13px; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.045em; line-height: 1.04; }
+h1 { margin-bottom: 18px; font-size: clamp(3.7rem, 6.3vw, 5.7rem); font-weight: 650; }
+h2 { font-size: clamp(2.2rem, 4.4vw, 3.8rem); margin-bottom: 10px; }
+.hero-summary { font-size: clamp(1rem, 1.7vw, 1.3rem); color: var(--subtle); max-width: 48ch; line-height: 1.55; margin-bottom: 24px; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 29px; }
+.primary { display: inline-flex; justify-content: center; gap: 22px; background: var(--blue); color: white; text-decoration: none; padding: 11px 15px; border-radius: 5px; font-weight: 700; }
+.primary:hover { background: var(--blue-deep); }
+.inline-link { font-weight: 650; font-size: .92rem; text-decoration: none; }
+.profile { display: flex; align-items: center; gap: 12px; }
+.profile img { border-radius: 50%; }
+.profile strong { font-size: 1.03rem; }
+.profile p { color: var(--subtle); margin: 2px 0 0; font-size: .84rem; line-height: 1.4; }
+.specimen { position: relative; min-height: 344px; margin: 0; padding: 35px 42px 39px; display: grid; place-items: center; background-color: #e5e8ff; background-image: linear-gradient(#c8cdf9 1px, transparent 1px), linear-gradient(90deg, #c8cdf9 1px, transparent 1px); background-size: 30px 30px; border: 1px solid #bcc6f4; border-radius: 8px; }
+.specimen img { object-fit: cover; width: 100%; height: 276px; border: 6px solid white; box-shadow: 12px 12px 0 #3044c8; transform: rotate(-4deg); }
+.specimen figcaption { position: absolute; right: 14px; bottom: 17px; padding: 10px 13px; background: var(--gold); border: 1px solid #936300; color: #3d2c07; box-shadow: 3px 4px #233b90; }
+.specimen code, .specimen figcaption span { display: block; }
+.specimen code { font: 700 .83rem Consolas, monospace; }
+.specimen figcaption span { font-size: .74rem; margin-top: 3px; }
+.content-section { border-top: 1px solid var(--line); padding-block: 32px 45px; }
+.section-head { margin-bottom: 24px; }
+.section-head p, .group-head p { color: var(--subtle); line-height: 1.52; }
+.section-head p { margin-bottom: 0; }
+.exercise-group { margin-block: 27px; display: grid; grid-template-columns: minmax(145px, .55fr) minmax(0, 2fr); gap: 20px; }
+.group-head h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.group-head p { font-size: .88rem; max-width: 26ch; margin-bottom: 0; }
+.exercise-list { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.exercise { display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; gap: 11px; align-items: start; height: 100%; min-height: 73px; text-decoration: none; background: var(--white); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 12px; }
+.exercise:hover { border-color: var(--blue); background: #eef0ff; }
+.exercise-id { color: var(--blue-deep); font: 700 .78rem Consolas, monospace; background: #e8ebff; padding: 4px 5px; border-radius: 4px; }
+.exercise strong { display: block; font-size: .91rem; }
+.exercise-desc { display: block; color: var(--subtle); line-height: 1.45; font-size: .81rem; margin-top: 3px; }
+.arrow { color: var(--blue-deep); }
+.notes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px 36px; align-items: start; }
+.notes p { color: var(--subtle); line-height: 1.68; margin-bottom: 0; }
+.note-label { font-weight: 650; }
+.footer { padding-block: 22px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: .86rem; color: var(--subtle); }
+.lab-directory { padding-block: 40px; }
+.lab-directory h1 { font-size: clamp(2.75rem, 6vw, 5rem); }
+@media (max-width: 900px) {
+  .wrap { width: calc(100% - 44px); }
+  .hero { gap: 33px; }
+  .specimen { padding-inline: 24px; min-height: 280px; }
+  .specimen img { height: 214px; }
+  .exercise-group { grid-template-columns: 1fr; gap: 9px; }
+  .group-head p { max-width: none; }
+}
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 32px); }
+  .topbar { min-height: 64px; }
+  .topbar nav { column-gap: 12px; font-size: .8rem; }
+  .brand { font-size: .84rem; gap: 5px; }
+  .brand-mark { width: 30px; height: 30px; }
+  .hero { grid-template-columns: 1fr; padding-block: 34px 36px; gap: 24px; }
+  h1 { font-size: clamp(3.1rem, 11vw, 4.7rem); }
+  .specimen { min-height: 216px; padding-block: 19px 26px; }
+  .specimen img { height: 177px; }
+  .exercise-list, .notes { grid-template-columns: 1fr; }
+}
+@media (max-width: 355px) {
+  .topbar nav { column-gap: 8px; }
+  .wrap { width: calc(100% - 24px); }
+}

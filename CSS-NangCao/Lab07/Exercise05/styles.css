@@ -1,0 +1,17 @@
+/* Both edge choices use the same width and let following text wrap. */
+figure {
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #a8a8a8;
+  background: #ededdd;
+}
+
+figure.float-left { float: left; }
+figure.float-right { float: right; }
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

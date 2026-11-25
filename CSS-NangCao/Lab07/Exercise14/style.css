@@ -1,0 +1,49 @@
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  padding:2rem;
+  font:16px/1.5 Verdana,sans-serif;
+  color:#263238;
+  background:#fff8e1
+}
+main {
+  max-width:760px;
+  margin:auto
+}
+h1 {
+  font-size:1.8rem
+}
+figure {
+  width:min(100%,320px);
+  margin:5rem auto;
+  padding:1rem;
+  background:#ffcc80;
+  box-shadow:0 8px 24px #0002;
+  transition:transform .45s ease
+}
+figure img {
+  display:block;
+  width:100%;
+  transition:transform .45s ease
+}
+figcaption {
+  margin-top:.7rem;
+  font-weight:bold
+}
+figure:hover,figure:focus-visible {
+  transform:rotate(5deg) skew(-4deg)
+}
+figure:hover img,figure:focus-visible img {
+  transform:translate(8px,-6px) rotate(2deg) scale(.96)
+}
+figure:focus-visible {
+  outline:3px solid #174ea6;
+  outline-offset:5px
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    transition-duration:.01ms!important
+  }
+}

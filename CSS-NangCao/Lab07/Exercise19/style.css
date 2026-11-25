@@ -1,0 +1,27 @@
+body {
+  padding-top:20px;
+  background:#f7f7f5
+}
+.page-header {
+  margin-top:0
+}
+.panel .list-group {
+  margin-bottom:0
+}
+.places .thumbnail {
+  height:100%
+}
+.places img {
+  width:100%;
+  height:145px;
+  object-fit:cover
+}
+.places .caption h3 {
+  margin-top:0
+}
+.places .btn {
+  white-space:normal
+}
+.well {
+  margin-top:1rem
+}

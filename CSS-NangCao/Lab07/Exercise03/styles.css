@@ -1,0 +1,25 @@
+/* The figure leaves normal flow; the caption is positioned against it. */
+figure {
+  position: absolute;
+  top: 205px;
+  left: min(200px, 30vw);
+  width: 150px;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #a8a8a8;
+  background: #ededdd;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  position: absolute;
+  top: 90px;
+  left: 110px;
+  padding: 8px;
+  background: #ffeb3b;
+}

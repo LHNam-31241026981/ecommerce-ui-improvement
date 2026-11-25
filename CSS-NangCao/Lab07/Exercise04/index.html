@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 7.4 — Stacking with z-index</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p><a href="../index.html">Back to Lab 07</a></p>
+    <h1>Exercise 7.4 — Stacking with z-index</h1>
+  </header>
+  <main>
+    <div class="stage-picker" role="group" aria-labelledby="stage-legend">
+      <p id="stage-legend"><strong>Choose a stacking example</strong></p>
+      <input type="radio" name="stacking" id="stage-auto" checked>
+      <label for="stage-auto">Auto / auto</label>
+      <input type="radio" name="stacking" id="stage-parent-high">
+      <label for="stage-parent-high">Parent 5 / caption 1</label>
+      <input type="radio" name="stacking" id="stage-child-high">
+      <label for="stage-child-high">Parent -1 / caption 10</label>
+    </div>
+    <p class="stacking-note">The caption is a child of the figure. Its z-index is resolved inside the figure's stacking context.</p>
+    <div class="scene" aria-label="Overlapping figure, caption, and paragraph">
+      <p class="underlay">Underlying paragraph content passes behind the positioned elements. Compare which layer is painted on top.</p>
+      <figure>
+        <img src="../images/828.jpg" alt="British Museum building">
+        <figcaption>British Museum</figcaption>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>

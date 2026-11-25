@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exercise 7.11 · Three-column layout</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Share Your Travels</h1>
+    </header>
+    <div class="layout">
+      <nav aria-label="Destinations">
+        <h2>Navigation</h2>
+        <ul>
+          <li>
+            <a href="#story">Australia</a>
+          </li>
+          <li>
+            <a href="#story">Belgium</a>
+          </li>
+          <li>
+            <a href="#story">Canada</a>
+          </li>
+          <li>
+            <a href="#story">France</a>
+          </li>
+          <li>
+            <a href="#story">Italy</a>
+          </li>
+        </ul>
+      </nav>
+      <main id="story">
+        <h2>Three-column layout</h2>
+        <figure>
+          <img src="../images/828.jpg" alt="British Museum">
+          <figcaption>British Museum</figcaption>
+        </figure>
+        <p>A three-column page places navigation and supporting information on either side of the main article.</p>
+        <p>Absolute positioning depends on a positioned ancestor. Here, the layout wrapper establishes that context, and CSS Grid keeps all three regions inside it.</p>
+        <p>The columns collapse into a readable sequence on narrow screens.</p>
+      </main>
+      <aside aria-label="Travel notes">
+        <section>
+          <h2>Cart</h2>
+          <p>Your itinerary is empty.</p>
+        </section>
+        <section>
+          <h2>Wish list</h2>
+          <p>Save destinations to plan a future trip.</p>
+        </section>
+      </aside>
+    </div>
+    <footer>Share Your Travels · Layout study</footer>
+    <p class="lab-return">
+      <a href="../index.html">Back to Lab 7 index</a>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exercise 7.19 · Bootstrap grid</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default" aria-label="Main navigation">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#top">Share Your Travels</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#top">Home</a>
+          </li>
+          <li>
+            <a href="#destinations">Browse</a>
+          </li>
+          <li>
+            <a href="#story">About</a>
+          </li>
+          <li>
+            <a href="#itinerary">Itinerary</a>
+          </li>
+        </ul>
+      </nav>
+      <header id="top" class="page-header">
+        <h1>Travel ideas <small>A Bootstrap grid study</small>
+      </h1>
+    </header>
+    <div class="row">
+      <aside class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Destinations</h2>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a href="#london">Austria</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#florence">Canada</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#venice">France</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#london">Italy</a>
+              </li>
+              <li class="list-group-item">
+                <a href="#venice">Spain</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-info" id="itinerary">
+          <div class="panel-heading">
+            <h2 class="panel-title">Itinerary</h2>
+          </div>
+          <div class="panel-body">Choose a place to read its travel note.</div>
+        </div>
+      </aside>
+      <main class="col-md-9" id="story">
+        <div class="jumbotron">
+          <h2>Main content</h2>
+          <p>Bootstrap's 12-column grid builds this 3/9 layout and the nested four-column row below. Resize the page to see the framework stack the columns at narrower widths.</p>
+        </div>
+        <h2 id="destinations">Featured places</h2>
+        <div class="row places">
+          <article class="col-md-3 col-sm-6" id="london">
+            <div class="thumbnail">
+              <img src="../images/464.jpg" alt="London">
+              <div class="caption">
+                <h3>London</h3>
+                <p>Landmarks and museums.</p>
+                <p>
+                  <a class="btn btn-primary" href="#story" role="button">
+                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
+                    </span> View note</a>
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="col-md-3 col-sm-6" id="florence">
+              <div class="thumbnail">
+                <img src="../images/9498358806.jpg" alt="Florence">
+                <div class="caption">
+                  <h3>Florence</h3>
+                  <p>Renaissance streets.</p>
+                  <p>
+                    <a class="btn btn-primary" href="#story" role="button">
+                      <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
+                      </span> View note</a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="col-md-3 col-sm-6" id="rome">
+                <div class="thumbnail">
+                  <img src="../images/9504449928.jpg" alt="Rome">
+                  <div class="caption">
+                    <h3>Rome</h3>
+                    <p>History in every quarter.</p>
+                    <p>
+                      <a class="btn btn-primary" href="#story" role="button">
+                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
+                        </span> View note</a>
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="col-md-3 col-sm-6" id="venice">
+                  <div class="thumbnail">
+                    <img src="../images/9494472443.jpg" alt="Venice">
+                    <div class="caption">
+                      <h3>Venice</h3>
+                      <p>Canals and quiet lanes.</p>
+                      <p>
+                        <a class="btn btn-primary" href="#story" role="button">
+                          <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
+                          </span> View note</a>
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </main>
+            </div>
+            <footer class="well">Layout demonstration using the locally supplied Bootstrap 3 stylesheet.</footer>
+          </div>
+          <p class="lab-return">
+            <a href="../index.html">Back to Lab 7 index</a>
+          </p>
+        </body>
+      </html>

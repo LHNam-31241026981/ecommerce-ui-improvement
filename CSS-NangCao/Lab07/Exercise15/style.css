@@ -1,0 +1,39 @@
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0;
+  padding:2rem;
+  font:16px/1.5 Verdana,sans-serif;
+  color:#263238
+}
+button {
+  min-height:3em;
+  min-width:8em;
+  padding:.6rem 1.2rem;
+  border:0;
+  border-radius:4px;
+  color:white;
+  font:inherit;
+  font-weight:bold;
+  background:#146d37;
+  cursor:pointer;
+  transition:background-color 1s ease-out,transform .2s ease,box-shadow .2s ease
+}
+button:hover,button:focus-visible {
+  background:#60b946;
+  transform:translateY(-2px);
+  box-shadow:0 5px 14px #0003
+}
+button:focus-visible {
+  outline:3px solid #174ea6;
+  outline-offset:3px
+}
+button:active {
+  transform:translateY(0)
+}
+@media(prefers-reduced-motion:reduce) {
+  button {
+    transition:none
+  }
+}

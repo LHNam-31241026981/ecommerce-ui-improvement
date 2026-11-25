@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Exercise 7.12–7.13 · Responsive layout</title>
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:481px)">
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width:480px)">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Share Your Travels</h1>
+      </header>
+      <div id="container">
+        <nav id="navigation" aria-label="Destinations">
+          <h2>Navigation</h2>
+          <ul>
+            <li>
+              <a href="#australia">Australia</a>
+            </li>
+            <li>
+              <a href="#belgium">Belgium</a>
+            </li>
+            <li>
+              <a href="#canada">Canada</a>
+            </li>
+            <li>
+              <a href="#france">France</a>
+            </li>
+            <li>
+              <a href="#uk">United Kingdom</a>
+            </li>
+            <li>
+              <a href="#usa">United States</a>
+            </li>
+          </ul>
+          <label class="mobile-label" for="destination">Choose a destination</label>
+          <select id="destination" aria-label="Choose a destination">
+            <option value="#australia">Australia</option>
+            <option value="#belgium">Belgium</option>
+            <option value="#canada">Canada</option>
+            <option value="#france">France</option>
+            <option value="#uk">United Kingdom</option>
+            <option value="#usa">United States</option>
+          </select>
+        </nav>
+        <article id="main">
+          <h2>Responsive reading</h2>
+          <figure>
+            <img src="../images/828-bigger.jpg" alt="British Museum">
+            <figcaption>British Museum</figcaption>
+          </figure>
+          <p id="australia">At 481 pixels and above, navigation sits beside the article. The breakpoint follows the lab's explicit 480/481 boundary.</p>
+          <p id="belgium">At 480 pixels and below, the navigation and article become one column; the destination list becomes a native select control.</p>
+          <p id="canada">The viewport declaration makes CSS pixels correspond to the device width on mobile browsers.</p>
+          <p id="france">Choose a destination from the select menu to jump to that section. The same destinations remain available as ordinary links on desktop.</p>
+          <p id="uk">The design preserves one content source and changes only its presentation.</p>
+          <p id="usa">Resize to compare both modes.</p>
+        </article>
+      </div>
+      <footer>Responsive layout · Exercises 7.12 and 7.13</footer>
+    </main>
+    <script>document.getElementById('destination').addEventListener('change',function(){location.hash=this.value.slice(1)});</script>
+    <p class="lab-return">
+      <a href="../index.html">Back to Lab 7 index</a>
+    </p>
+  </body>
+</html>

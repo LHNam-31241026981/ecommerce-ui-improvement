@@ -1,0 +1,18 @@
+/* The three rules demonstrate block, inline, and block display. */
+.demo-heading span {
+  color: #8b0000;
+  font-size: 1.5em;
+  display: block;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.gallery img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-block: 0.5rem;
+}

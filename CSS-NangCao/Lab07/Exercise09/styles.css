@@ -1,0 +1,44 @@
+/* The figure anchors two absolute overlays: the banner and caption. */
+article {
+  display: flow-root;
+  max-width: 48rem;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  background: #898989;
+}
+
+figure {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #262626;
+  background: #c1c1c1;
+}
+
+figure > img:first-child {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.new-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 86px;
+  height: auto;
+}
+
+figcaption {
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  box-sizing: border-box;
+  width: 140px;
+  min-height: 30px;
+  padding: 5px;
+  color: #fff;
+  background: #000;
+  opacity: 0.85;
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Exercise 7.18 · Animations</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>CSS keyframe animation</h1>
+      <p>Compare a repeating movement with a three-cycle keyframe sequence. Both start paused.</p>
+      <div class="controls">
+        <label for="variant">Sequence</label>
+        <select id="variant">
+          <option value="two">Animation 2 · four keyframe stages</option>
+          <option value="one">Animation 1 · repeating movement</option>
+        </select>
+        <button id="toggle" type="button" aria-pressed="false">Play animation</button>
+      </div>
+      <div class="stage">
+        <div class="box" data-variant="two" aria-hidden="true">
+        </div>
+      </div>
+      <p id="status" role="status" aria-live="polite">Paused at the start.</p>
+    </main>
+    <script>
+      const box = document.querySelector(".box");
+      const variant = document.querySelector("#variant");
+      const button = document.querySelector("#toggle");
+      const status = document.querySelector("#status");
+
+      function setPlayback(playing, message) {
+        box.classList.toggle("is-playing", playing);
+        button.setAttribute("aria-pressed", String(playing));
+        button.textContent = playing ? "Pause animation" : "Play animation";
+        status.textContent = message;
+      }
+
+      function resetSequence() {
+        box.dataset.variant = variant.value;
+        setPlayback(false, "Paused at the start.");
+      }
+
+      variant.addEventListener("change", resetSequence);
+      box.addEventListener("animationend", () => setPlayback(false, "Sequence completed."));
+      button.addEventListener("click", () => {
+        const playing = button.getAttribute("aria-pressed") !== "true";
+        if (playing && status.textContent === "Sequence completed.") {
+          box.dataset.variant = "";
+          void box.offsetWidth;
+          box.dataset.variant = variant.value;
+        }
+        setPlayback(playing, playing ? "Animation playing." : "Animation paused.");
+      });
+    </script>
+    <p class="lab-return">
+      <a href="../index.html">Back to Lab 7 index</a>
+    </p>
+  </body>
+</html>

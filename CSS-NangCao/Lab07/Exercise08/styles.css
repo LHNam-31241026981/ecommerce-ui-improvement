@@ -1,0 +1,25 @@
+/* clear:left starts the selected third figure and paragraph below left floats. */
+article {
+  display: flow-root;
+  max-width: 64rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: #898989;
+}
+
+figure {
+  float: left;
+  width: 150px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #262626;
+  background: #c1c1c1;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.first { clear: left; }

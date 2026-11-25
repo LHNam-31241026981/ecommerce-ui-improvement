@@ -1,0 +1,17 @@
+/* Relative offsets move the box while its original flow space remains. */
+figure {
+  position: relative;
+  top: 55px;
+  left: 70px;
+  width: 150px;
+  margin: 0 0 65px;
+  padding: 5px;
+  border: 1px solid #a8a8a8;
+  background: #ededdd;
+}
+
+figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
