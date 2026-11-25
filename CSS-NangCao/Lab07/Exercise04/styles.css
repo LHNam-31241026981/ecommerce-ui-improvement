@@ -35,9 +35,14 @@ main:has(#stage-parent-high:checked) .scene {
   --caption-layer: 1;
 }
 
+main:has(#stage-child-behind:checked) .scene {
+  --parent-layer: 1;
+  --caption-layer: -1;
+}
+
 main:has(#stage-child-high:checked) .scene {
   --parent-layer: -1;
-  --caption-layer: 10;
+  --caption-layer: 1;
 }
 
 .underlay {

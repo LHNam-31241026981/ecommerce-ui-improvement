@@ -1,68 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Exercise 7.19 · Bootstrap grid</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-default" aria-label="Main navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#top">Share Your Travels</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#top">Home</a>
-          </li>
-          <li>
-            <a href="#destinations">Browse</a>
-          </li>
-          <li>
-            <a href="#story">About</a>
-          </li>
-          <li>
-            <a href="#itinerary">Itinerary</a>
-          </li>
-        </ul>
-      </nav>
-      <header id="top" class="page-header">
-        <h1>Travel ideas <small>A Bootstrap grid study</small>
-      </h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise 7.19 · Bootstrap grid</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-default" aria-label="Main navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#top">Share Your Travels</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#top">Home</a></li>
+        <li><a href="#destinations">Browse</a></li>
+        <li><a href="#story">About</a></li>
+        <li><a href="#itinerary">Itinerary</a></li>
+      </ul>
+    </nav>
+    <header id="top" class="page-header">
+      <h1>Travel ideas <small>A Bootstrap grid study</small></h1>
     </header>
     <div class="row">
       <aside class="col-md-3">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">Destinations</h2>
-          </div>
+          <div class="panel-heading"><h2 class="panel-title">Destinations</h2></div>
           <div class="panel-body">
             <ul class="list-group">
-              <li class="list-group-item">
-                <a href="#london">Austria</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#florence">Canada</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#venice">France</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#london">Italy</a>
-              </li>
-              <li class="list-group-item">
-                <a href="#venice">Spain</a>
-              </li>
+              <li class="list-group-item"><a href="#london">London</a></li>
+              <li class="list-group-item"><a href="#florence">Florence</a></li>
+              <li class="list-group-item"><a href="#rome">Rome</a></li>
+              <li class="list-group-item"><a href="#venice">Venice</a></li>
             </ul>
           </div>
         </div>
         <div class="panel panel-info" id="itinerary">
-          <div class="panel-heading">
-            <h2 class="panel-title">Itinerary</h2>
+          <div class="panel-heading"><h2 class="panel-title">Itinerary</h2></div>
+          <div class="panel-body">
+            <p id="itinerary-status" role="status">Your itinerary is empty.</p>
+            <ul id="itinerary-items"></ul>
           </div>
-          <div class="panel-body">Choose a place to read its travel note.</div>
         </div>
       </aside>
       <main class="col-md-9" id="story">
@@ -78,63 +57,87 @@
               <div class="caption">
                 <h3>London</h3>
                 <p>Landmarks and museums.</p>
-                <p>
-                  <a class="btn btn-primary" href="#story" role="button">
-                    <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
-                    </span> View note</a>
-                  </p>
-                </div>
+                <details><summary class="btn btn-primary">View note</summary>
+                  <p>Explore the British Museum and the streets of Bloomsbury.</p>
+                </details>
+                <button type="button" class="btn btn-success itinerary-toggle" data-place="London" aria-pressed="false">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add London
+                </button>
               </div>
-            </article>
-            <article class="col-md-3 col-sm-6" id="florence">
-              <div class="thumbnail">
-                <img src="../images/9498358806.jpg" alt="Florence">
-                <div class="caption">
-                  <h3>Florence</h3>
-                  <p>Renaissance streets.</p>
-                  <p>
-                    <a class="btn btn-primary" href="#story" role="button">
-                      <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
-                      </span> View note</a>
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="col-md-3 col-sm-6" id="rome">
-                <div class="thumbnail">
-                  <img src="../images/9504449928.jpg" alt="Rome">
-                  <div class="caption">
-                    <h3>Rome</h3>
-                    <p>History in every quarter.</p>
-                    <p>
-                      <a class="btn btn-primary" href="#story" role="button">
-                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
-                        </span> View note</a>
-                      </p>
-                    </div>
-                  </div>
-                </article>
-                <article class="col-md-3 col-sm-6" id="venice">
-                  <div class="thumbnail">
-                    <img src="../images/9494472443.jpg" alt="Venice">
-                    <div class="caption">
-                      <h3>Venice</h3>
-                      <p>Canals and quiet lanes.</p>
-                      <p>
-                        <a class="btn btn-primary" href="#story" role="button">
-                          <span class="glyphicon glyphicon-info-sign" aria-hidden="true">
-                          </span> View note</a>
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </main>
             </div>
-            <footer class="well">Layout demonstration using the locally supplied Bootstrap 3 stylesheet.</footer>
-          </div>
-          <p class="lab-return">
-            <a href="../index.html">Back to Lab 7 index</a>
-          </p>
-        </body>
-      </html>
+          </article>
+          <article class="col-md-3 col-sm-6" id="florence">
+            <div class="thumbnail">
+              <img src="../images/9498358806.jpg" alt="Florence">
+              <div class="caption">
+                <h3>Florence</h3>
+                <p>Renaissance streets.</p>
+                <details><summary class="btn btn-primary">View note</summary>
+                  <p>See the cathedral dome before walking along the Arno.</p>
+                </details>
+                <button type="button" class="btn btn-success itinerary-toggle" data-place="Florence" aria-pressed="false">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add Florence
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-3 col-sm-6" id="rome">
+            <div class="thumbnail">
+              <img src="../images/travel/9498386718.jpg" alt="St. Peter’s Square, Rome">
+              <div class="caption">
+                <h3>Rome</h3>
+                <p>History in every quarter.</p>
+                <details><summary class="btn btn-primary">View note</summary>
+                  <p>Plan time for the Roman Forum and the Pantheon.</p>
+                </details>
+                <button type="button" class="btn btn-success itinerary-toggle" data-place="Rome" aria-pressed="false">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add Rome
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="col-md-3 col-sm-6" id="venice">
+            <div class="thumbnail">
+              <img src="../images/9494472443.jpg" alt="Venice">
+              <div class="caption">
+                <h3>Venice</h3>
+                <p>Canals and quiet lanes.</p>
+                <details><summary class="btn btn-primary">View note</summary>
+                  <p>Walk through Dorsoduro to Santa Maria della Salute.</p>
+                </details>
+                <button type="button" class="btn btn-success itinerary-toggle" data-place="Venice" aria-pressed="false">
+                  <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add Venice
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <footer class="well"><a href="../index.html">Back to Lab 07</a></footer>
+  </div>
+  <script>
+    const chosen = new Set();
+    const itineraryItems = document.querySelector("#itinerary-items");
+    const itineraryStatus = document.querySelector("#itinerary-status");
+
+    document.querySelectorAll(".itinerary-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const place = button.dataset.place;
+        if (chosen.has(place)) chosen.delete(place);
+        else chosen.add(place);
+        button.setAttribute("aria-pressed", String(chosen.has(place)));
+
+        itineraryItems.replaceChildren(...Array.from(chosen, (destination) => {
+          const item = document.createElement("li");
+          item.textContent = destination;
+          return item;
+        }));
+        itineraryStatus.textContent = chosen.size
+          ? chosen.size + (chosen.size === 1 ? " destination selected." : " destinations selected.")
+          : "Your itinerary is empty.";
+      });
+    });
+  </script>
+</body>
+</html>

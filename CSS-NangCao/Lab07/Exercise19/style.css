@@ -25,3 +25,17 @@ body {
 .well {
   margin-top:1rem
 }
+
+.places details {
+  margin-bottom: 8px;
+}
+.places details p {
+  margin: 8px 0 0;
+}
+.itinerary-toggle[aria-pressed="true"] {
+  outline: 2px solid currentColor;
+  outline-offset: -4px;
+}
+#itinerary-items:empty {
+  display: none;
+}

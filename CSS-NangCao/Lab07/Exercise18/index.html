@@ -29,6 +29,7 @@
       const variant = document.querySelector("#variant");
       const button = document.querySelector("#toggle");
       const status = document.querySelector("#status");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
       function setPlayback(playing, message) {
         box.classList.toggle("is-playing", playing);
@@ -39,9 +40,12 @@
 
       function resetSequence() {
         box.dataset.variant = variant.value;
-        setPlayback(false, "Paused at the start.");
+        button.disabled = reducedMotion.matches;
+        setPlayback(false, reducedMotion.matches ? "Animation turned off by your motion preference." : "Paused at the start.");
       }
 
+      resetSequence();
+      reducedMotion.addEventListener("change", resetSequence);
       variant.addEventListener("change", resetSequence);
       box.addEventListener("animationend", () => setPlayback(false, "Sequence completed."));
       button.addEventListener("click", () => {
